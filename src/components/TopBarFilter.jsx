@@ -64,14 +64,26 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
   }, [maxPossiblePrice]);
 
   useEffect(() => {
-    onFilterChange({
-      categories: selectedCategories,
-      sizes: selectedSizes,
-      minPrice,
-      maxPrice,
-      sortMethod
-    });
-  }, [selectedCategories, selectedSizes, minPrice, maxPrice, sortMethod, onFilterChange]);
+    let result = [...allProducts];
+
+    if (selectedCategories.length > 0) {
+      result = result.filter(p => p.categories?.some(c => selectedCategories.includes(c)));
+    }
+
+    if (selectedSizes.length > 0) {
+      result = result.filter(p => p.sizes?.some(s => selectedSizes.includes(s)));
+    }
+
+    result = result.filter(p => p.price >= minPrice && p.price <= maxPrice);
+
+    if (sortMethod === "Price Low To High") {
+      result.sort((a, b) => a.price - b.price);
+    } else if (sortMethod === "Price High To Low") {
+      result.sort((a, b) => b.price - a.price);
+    }
+
+    onFilterChange(result);
+  }, [selectedCategories, selectedSizes, minPrice, maxPrice, sortMethod, allProducts, onFilterChange]);
 
   // Lock body scroll when mobile filter is open
   useEffect(() => {
