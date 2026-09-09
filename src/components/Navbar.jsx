@@ -31,8 +31,8 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 w-full bg-white border-b border-brand-border transition-all" data-purpose="main-navigation" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
-          {/* Mobile Left: Hamburger */}
-          <div className="flex md:hidden flex-1 items-center justify-start">
+          {/* Mobile Left: Hamburger & Search */}
+          <div className="flex md:hidden flex-1 items-center justify-start gap-1">
             <button 
               aria-label="Open Mobile Menu"
               className="p-2 -ml-2 text-brand-charcoal hover:text-brand-black transition-colors" 
@@ -41,6 +41,7 @@ export default function Navbar() {
             >
               <span className="material-symbols-outlined text-[28px]">menu</span>
             </button>
+            <GlobalSearch />
           </div>
 
           {/* Desktop Left: Logo */}
@@ -73,7 +74,9 @@ export default function Navbar() {
 
           {/* Right: Actions */}
           <div className="flex flex-1 md:flex-none items-center justify-end gap-2 sm:gap-4" >
-            <GlobalSearch />
+            <div className="hidden md:block">
+              <GlobalSearch />
+            </div>
             <button aria-label="Account" className="p-2 rounded-xl text-brand-charcoal hover:bg-black/5 hover:text-brand-black transition duration-200 flex items-center justify-center"  type="button">
               <svg className="w-5 h-5" fill="none" height="20" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" vectorEffect="non-scaling-stroke" viewBox="0 0 24 24" width="20"><circle cx="12" cy="7" r="4"></circle><path d="M5 21a7 7 0 0 1 14 0"></path></svg>
             </button>
