@@ -29,7 +29,7 @@ export default function Product() {
 <section className="max-w-[1360px] w-full mx-auto px-margin-desktop py-space-xl">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
 
-<div className="lg:col-span-7 flex flex-col-reverse md:flex-row gap-space-sm sticky top-[136px]">
+<div className="lg:col-span-7 flex flex-col-reverse md:flex-row gap-space-sm relative lg:sticky top-[136px]">
 
 <div className="flex md:flex-col gap-space-xs shrink-0 overflow-x-auto md:overflow-visible pb-1 md:pb-0" id="thumbnail-strip">
 <button className="thumb-btn relative w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden bg-surface-container-lowest p-1 shadow-sm transition-all duration-200 ring-2 ring-primary ring-offset-2 ring-offset-surface"  type="button">

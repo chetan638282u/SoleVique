@@ -140,18 +140,49 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
         `}} />
         <div className="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-wrap items-center justify-between gap-4 w-full">
           
-          {/* MOBILE ONLY: Filter Button */}
-          <div className="flex md:hidden w-full items-center">
+          {/* MOBILE ONLY: Filter & Sort Buttons */}
+          <div className="flex md:hidden w-full items-center gap-4 relative">
             <button 
               onClick={() => setIsMobileFilterOpen(true)}
-              className="flex w-full items-center justify-between px-4 py-3 border border-neutral-300 bg-white hover:bg-neutral-50 text-sm font-semibold tracking-wider text-brand-black uppercase transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border border-neutral-300 bg-white hover:bg-neutral-50 text-sm font-semibold tracking-wider text-brand-black uppercase transition-colors"
             >
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[20px]">tune</span>
-                Filter & Sort
-              </div>
-              <span className="material-symbols-outlined text-[20px]">chevron_right</span>
+              <span className="material-symbols-outlined text-[20px]">tune</span>
+              Filter
             </button>
+
+            <button 
+              onClick={() => toggleDropdown('mobileSort')}
+              className="flex-1 flex items-center justify-between px-4 py-3 border border-neutral-300 bg-white hover:bg-neutral-50 text-sm font-semibold tracking-wider text-brand-black uppercase transition-colors"
+            >
+              <span className="truncate">{sortMethod === "Recommended" ? "Recommend" : sortMethod}</span>
+              <span className="material-symbols-outlined text-[20px]">
+                {activeDropdown === 'mobileSort' ? 'expand_less' : 'expand_more'}
+              </span>
+            </button>
+
+            {/* Mobile Sort Dropdown */}
+            {activeDropdown === 'mobileSort' && (
+              <div className="absolute top-full right-0 mt-1 w-[calc(50%-0.5rem)] bg-white border border-neutral-300 shadow-lg z-50 flex flex-col">
+                <button 
+                  onClick={() => { setSortMethod("Recommended"); setActiveDropdown(null); }}
+                  className={`text-left px-4 py-3 text-sm font-semibold ${sortMethod === "Recommended" ? "bg-brand-charcoal text-white" : "hover:bg-neutral-100 text-brand-black"}`}
+                >
+                  Recommend
+                </button>
+                <button 
+                  onClick={() => { setSortMethod("Price Low To High"); setActiveDropdown(null); }}
+                  className={`text-left px-4 py-3 text-sm font-semibold ${sortMethod === "Price Low To High" ? "bg-brand-charcoal text-white" : "hover:bg-neutral-100 text-brand-black"}`}
+                >
+                  Price Low To High
+                </button>
+                <button 
+                  onClick={() => { setSortMethod("Price High To Low"); setActiveDropdown(null); }}
+                  className={`text-left px-4 py-3 text-sm font-semibold ${sortMethod === "Price High To Low" ? "bg-brand-charcoal text-white" : "hover:bg-neutral-100 text-brand-black"}`}
+                >
+                  Price High To Low
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Left Side: Filter Dropdowns (DESKTOP ONLY) */}
@@ -327,44 +358,7 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
         {/* Scrollable Content */}
         <div className="flex-1 overflow-y-auto p-6 space-y-8 pb-32">
           
-          {/* Mobile Sort */}
-          <div>
-            <h3 className="font-bold uppercase tracking-widest text-xs text-neutral-500 mb-4">Sort By</h3>
-            <div className="space-y-2">
-              <label className="flex items-center justify-between cursor-pointer group p-3 border border-neutral-200 rounded-lg hover:border-brand-ember transition-colors">
-                <span className="font-semibold text-brand-black">Recommended</span>
-                <input 
-                  type="radio" 
-                  name="mobile-sort" 
-                  className="accent-brand-ember w-4 h-4"
-                  checked={sortMethod === "Recommended"}
-                  onChange={() => setSortMethod("Recommended")}
-                />
-              </label>
-              <label className="flex items-center justify-between cursor-pointer group p-3 border border-neutral-200 rounded-lg hover:border-brand-ember transition-colors">
-                <span className="font-semibold text-brand-black">Price Low To High</span>
-                <input 
-                  type="radio" 
-                  name="mobile-sort" 
-                  className="accent-brand-ember w-4 h-4"
-                  checked={sortMethod === "Price Low To High"}
-                  onChange={() => setSortMethod("Price Low To High")}
-                />
-              </label>
-              <label className="flex items-center justify-between cursor-pointer group p-3 border border-neutral-200 rounded-lg hover:border-brand-ember transition-colors">
-                <span className="font-semibold text-brand-black">Price High To Low</span>
-                <input 
-                  type="radio" 
-                  name="mobile-sort" 
-                  className="accent-brand-ember w-4 h-4"
-                  checked={sortMethod === "Price High To Low"}
-                  onChange={() => setSortMethod("Price High To Low")}
-                />
-              </label>
-            </div>
-          </div>
 
-          <hr className="border-neutral-200"/>
 
           {/* Mobile Category */}
           {availableCategories.length > 0 && (
