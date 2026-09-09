@@ -1,0 +1,748 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-fixed": "#e3e1ec",
+          "outline-variant": "#c8c5cb",
+          "error-container": "#ffdad6",
+          "surface-tint": "#5f5e61",
+          "on-surface-variant": "#47464b",
+          "surface-variant": "#e5e2dd",
+          "background": "#fcf9f4",
+          "primary-container": "#1b1b1e",
+          "error": "#ba1a1a",
+          "primary-fixed": "#e4e1e6",
+          "inverse-on-surface": "#f3f0eb",
+          "surface-dim": "#dcdad5",
+          "on-surface": "#1c1c19",
+          "on-tertiary": "#ffffff",
+          "surface": "#fcf9f4",
+          "outline": "#77767b",
+          "surface-container-low": "#f6f3ee",
+          "tertiary": "#000000",
+          "on-secondary": "#ffffff",
+          "on-error": "#ffffff",
+          "on-tertiary-container": "#83838c",
+          "secondary": "#a23e18",
+          "on-secondary-container": "#6f2000",
+          "on-secondary-fixed": "#390c00",
+          "on-tertiary-fixed": "#1a1b22",
+          "on-primary-fixed-variant": "#47464a",
+          "tertiary-fixed-dim": "#c6c5cf",
+          "surface-container-high": "#ebe8e3",
+          "on-background": "#1c1c19",
+          "primary": "#000000",
+          "surface-container-highest": "#e5e2dd",
+          "inverse-primary": "#c8c5ca",
+          "inverse-surface": "#31302d",
+          "on-primary": "#ffffff",
+          "tertiary-container": "#1a1b22",
+          "primary-fixed-dim": "#c8c5ca",
+          "secondary-fixed-dim": "#ffb59c",
+          "surface-container": "#f0ede9",
+          "on-tertiary-fixed-variant": "#46464e",
+          "secondary-container": "#fe8357",
+          "surface-container-lowest": "#ffffff",
+          "on-primary-container": "#858387",
+          "secondary-fixed": "#ffdbcf",
+          "surface-bright": "#fcf9f4",
+          "on-secondary-fixed-variant": "#822801",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#1b1b1e"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.75rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "1.5rem",
+          "margin-desktop": "3rem",
+          "space-md": "1rem",
+          "space-2xs": "0.25rem",
+          "space-2xl": "3rem",
+          "margin-mobile": "1.25rem",
+          "space-4xl": "6rem",
+          "gutter-mobile": "1rem",
+          "space-xs": "0.5rem",
+          "space-3xl": "4.5rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "display-xl-mobile": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-xl": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-xl-mobile": [
+            "36px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="bg-primary text-on-primary py-space-xs px-margin-mobile lg:px-margin-desktop"><div class="max-w-[1360px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-space-xs"><div class="flex items-center gap-space-sm"><span class="bg-secondary px-space-xs py-space-2xs rounded text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">Drop</span><span class="font-label-sm text-label-sm uppercase tracking-wider">NEW TIER 0 DROP LIVE: ARCH-SERIES 01</span></div><div class="hidden md:flex items-center gap-space-lg"><span class="font-label-sm text-label-sm text-surface-container-high tracking-wider">Worldwide Complimentary Express Shipping on Orders Above $150</span><div class="flex items-center gap-space-md"><a class="font-label-sm text-label-sm text-surface-container-highest hover:text-on-primary transition-colors uppercase tracking-wider" data-path="flagships" href="#">Flagships</a><a class="font-label-sm text-label-sm text-surface-container-highest hover:text-on-primary transition-colors uppercase tracking-wider" data-path="client-care" href="#">Client Care</a></div></div></div></div><div class="h-20 max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold tracking-tighter">SV</div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold">SOLEVIQUE</span></a><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-on-surface font-semibold"><a aria-current="page" class="uppercase tracking-wider transition-colors py-space-xs text-on-surface font-semibold" data-path="men-catalog" href="#">Men</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="women-catalog" href="#">Women</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="new-arrivals" href="#">New Arrivals</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="collections" href="#">Collections</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="sale" href="#">Sale</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-2xs py-space-xs px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">language</span><span class="">USD ($)</span></div><button aria-label="Search" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">search</span></button><a aria-label="Profile" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="account" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a><a aria-label="Cart" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="cart-drawer" href="#"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] flex items-center justify-center leading-none">3</span></a></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- BREADCRUMBS & HERO HEADER SECTION -->
+<section class="w-full bg-surface-container-low pb-space-2xl pt-space-lg">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop space-y-space-lg">
+<!-- Breadcrumb Trail -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<a class="hover:text-on-surface transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<a class="hover:text-on-surface transition-colors" href="#">Men</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<span class="text-on-surface font-semibold">Shoes &amp; Footwear</span>
+</nav>
+<!-- Hero Header & Editorial Copy -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 space-y-space-xs">
+
+<h1 class="font-display-xl text-display-xl tracking-tight text-on-surface uppercase font-extrabold">
+            Men's Footwear &amp; Silhouettes
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl pt-space-2xs">
+            Sculpted Italian craftsmanship meeting zero-drop anatomical comfort. Explore everyday running silhouettes, handcrafted Tuscan loafers, minimal court sneakers, and luxury leather slides.
+          </p>
+</div>
+
+</div>
+<!-- Quick Category Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs scrollbar-none pt-space-xs">
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-full uppercase tracking-wider whitespace-nowrap shadow-sm hover:scale-[1.02] transition-transform">
+          All Men's (124)
+        </button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md rounded-full uppercase tracking-wider whitespace-nowrap shadow-sm transition-all">
+          Sneakers &amp; Court (48)
+        </button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md rounded-full uppercase tracking-wider whitespace-nowrap shadow-sm transition-all">
+          Loafers &amp; Dress (26)
+        </button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md rounded-full uppercase tracking-wider whitespace-nowrap shadow-sm transition-all">
+          Runners &amp; Athletic (32)
+        </button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md rounded-full uppercase tracking-wider whitespace-nowrap shadow-sm transition-all">
+          Slides &amp; Sandals (18)
+        </button>
+</div>
+</div>
+</section>
+<!-- TOOLBAR / RESULTS BAR -->
+<section class="w-full sticky top-20 z-40 bg-surface/90 backdrop-blur-md shadow-sm">
+
+</section>
+<!-- MAIN CATALOG CONTENT AREA: 2-COLUMN LAYOUT -->
+<section class="w-full max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: STICKY FILTERS SIDEBAR (Approx 22%) -->
+<aside class="lg:col-span-3 space-y-space-lg lg:sticky lg:top-36 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<!-- Filter Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
+<span class="font-headline-sm text-headline-sm uppercase font-bold tracking-tight">Filters</span>
+<span class="bg-secondary text-on-secondary px-space-xs py-0.5 rounded-full font-label-sm text-[10px] font-bold">3</span>
+</div>
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:underline">Clear All</button>
+</div>
+<!-- Collapsible Group 1: Category -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between cursor-pointer py-space-2xs group">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Category</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface">expand_less</span>
+</div>
+<div class="space-y-space-2xs pt-space-2xs font-body-md text-body-md">
+<label class="flex items-center justify-between cursor-pointer hover:text-secondary group py-1">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors">Sneakers</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">48</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-secondary group py-1">
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors">Formal Loafers</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">26</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-secondary group py-1">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors">Running &amp; Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">32</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-secondary group py-1">
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors">Architectural Slides</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">18</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-secondary group py-1">
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors">Boots &amp; High-tops</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8</span>
+</label>
+</div>
+</div>
+<!-- Collapsible Group 2: Size (EU / US) -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between cursor-pointer py-space-2xs group">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Size (EU)</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface">expand_less</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs pt-space-2xs">
+<button class="h-10 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors">39</button>
+<button class="h-10 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors">40</button>
+<button class="h-10 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors">41</button>
+<button class="h-10 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm">42</button>
+<button class="h-10 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors">43</button>
+<button class="h-10 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors">44</button>
+<button class="h-10 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container font-semibold transition-colors">45</button>
+<button class="h-10 rounded bg-surface-container-low text-on-surface-variant/40 font-label-sm text-label-sm line-through cursor-not-allowed">46</button>
+</div>
+</div>
+<!-- Collapsible Group 3: Color Swatches -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between cursor-pointer py-space-2xs group">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Color Palette</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface">expand_less</span>
+</div>
+
+</div>
+<!-- Collapsible Group 4: Price Range -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between cursor-pointer py-space-2xs group">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Price Range</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface">expand_less</span>
+</div>
+<div class="space-y-space-sm pt-space-2xs">
+<!-- Dual Slider Simulation Graphic -->
+<div class="relative w-full h-1.5 bg-surface-container rounded-full my-space-md">
+<div class="absolute left-[15%] right-[25%] h-full bg-secondary rounded-full"></div>
+<div class="absolute left-[15%] top-1/2 -translate-y-1/2 w-4 h-4 bg-surface-container-lowest shadow-md rounded-full -ml-2 cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="absolute right-[25%] top-1/2 -translate-y-1/2 w-4 h-4 bg-surface-container-lowest shadow-md rounded-full -mr-2 cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="px-space-xs py-1 rounded bg-surface-container font-semibold text-on-surface">$120</span>
+<span class="text-on-surface-variant uppercase tracking-wider font-bold">To</span>
+<span class="px-space-xs py-1 rounded bg-surface-container font-semibold text-on-surface">$450</span>
+</div>
+</div>
+</div>
+<!-- Collapsible Group 5: Material & Craft -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between cursor-pointer py-space-2xs group">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Material &amp; Craft</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface">expand_less</span>
+</div>
+<div class="space-y-space-2xs pt-space-2xs font-body-md text-body-md">
+<label class="flex items-center gap-space-xs cursor-pointer hover:text-secondary group py-1">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors text-[13px]">Full-Grain Italian Calfskin</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer hover:text-secondary group py-1">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors text-[13px]">Hand-Buffed Tuscan Suede</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer hover:text-secondary group py-1">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors text-[13px]">Recycled Performance Mesh</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer hover:text-secondary group py-1">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="text-on-surface group-hover:text-secondary transition-colors text-[13px]">Zero-Drop Cushioned Sole</span>
+</label>
+</div>
+</div>
+<!-- Collapsible Group 6: Collection / Batch (Collapsed) -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between cursor-pointer py-space-2xs group">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Collection / Batch</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface">expand_more</span>
+</div>
+</div>
+</aside>
+<!-- RIGHT COLUMN: MAIN PRODUCT GRID (Approx 78%) -->
+<main class="lg:col-span-9 space-y-space-2xl">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-space-lg" id="product-grid"><!-- PRODUCT CARD 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+  <div>
+    <div class="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden flex items-center justify-center">
+      <span class="absolute top-space-xs left-space-xs z-10 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-space-xs py-1 rounded">
+        NEW
+      </span>
+      <button aria-label="Add to Wishlist" class="absolute top-space-xs right-space-xs z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-[20px]">favorite</span>
+      </button>
+      <img alt="Retro Low GAT Trainer" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiYmlFYN0hPwXeNQ3Vx-KcPVFOTEW9QjGUWtXFN_f7ShqcxHRwZnZULW93IXsy0-2xeiH6qI-sa9LbzrriOdlTVXgMHUWI68ysr9Pk3pHCzcTbSgopRV5wX7DHjtRfiY3lPb065oF5UMLFC5Hjvob2PseTZABJ9hEABO_brjwKMW7i-gKc6tAiSiBvzhNyUMK6QCb0ZClf7HWES3QJwMpRrl_O8i3q6417PS3aRLPW6nSrcc02Sno">
+    </div>
+    <div class="pt-space-md space-y-1">
+      <div class="flex items-center gap-space-2xs text-secondary text-label-sm">
+        <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+        <span class="font-bold text-on-surface">4.9</span>
+        <span class="text-on-surface-variant">(112 reviews)</span>
+      </div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-tight group-hover:text-secondary transition-colors">
+        RETRO LOW GAT TRAINER
+      </h3>
+      <p class="font-body-md text-body-md text-on-surface-variant">Chalk White Calfskin &amp; Suede</p>
+      <div class="flex items-center gap-space-xs pt-space-2xs">
+        <span class="font-headline-sm text-headline-sm font-bold text-on-surface">$225</span>
+      </div>
+    </div>
+  </div>
+  <div class="pt-space-md">
+    <button class="w-full h-11 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+      ADD TO CART
+    </button>
+  </div>
+</div>
+
+<!-- PRODUCT CARD 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+  <div>
+    <div class="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden flex items-center justify-center">
+      <span class="absolute top-space-xs left-space-xs z-10 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider px-space-xs py-1 rounded">
+        ATELIER EDITION
+      </span>
+      <button aria-label="Add to Wishlist" class="absolute top-space-xs right-space-xs z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-[20px]">favorite</span>
+      </button>
+      <img alt="Oxblood Double Monk Strap" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn2oNya1DIsU4LG-HymSZOMQffK8g8Dcs6MUi_UGjMT5NNa_ZAqW4XeybP6YcSH2UB1dT1pRPXlC3igB9znjzNCzxWhKYHA2RrPHp4KxIj8a1WU3WlB07OOXDRdr-B3bl8IdLOZuKA7_VsosGE84fAQR1DGg_CCEaxLkoqMIPV8ZslcHly3MuVDT-k_0emDEVf7HHgFh0npbgLIQQO_P6lbZYJcKSFekD2S9I4fM1v5sy7QQ7n0lc">
+    </div>
+    <div class="pt-space-md space-y-1">
+      <div class="flex items-center gap-space-2xs text-secondary text-label-sm">
+        <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+        <span class="font-bold text-on-surface">5.0</span>
+        <span class="text-on-surface-variant">(64 reviews)</span>
+      </div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-tight group-hover:text-secondary transition-colors">
+        OXBLOOD DOUBLE MONK STRAP
+      </h3>
+      <p class="font-body-md text-body-md text-on-surface-variant">Hand-Burnished Burgundy Calfskin</p>
+      <div class="flex items-center gap-space-xs pt-space-2xs">
+        <span class="font-headline-sm text-headline-sm font-bold text-on-surface">$345</span>
+      </div>
+    </div>
+  </div>
+  <div class="pt-space-md">
+    <button class="w-full h-11 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+      ADD TO CART
+    </button>
+  </div>
+</div>
+
+<!-- PRODUCT CARD 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+  <div>
+    <div class="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden flex items-center justify-center">
+      <span class="absolute top-space-xs left-space-xs z-10 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-space-xs py-1 rounded">
+        BEST SELLER
+      </span>
+      <button aria-label="Add to Wishlist" class="absolute top-space-xs right-space-xs z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-[20px]">favorite</span>
+      </button>
+      <img alt="Tuscan Suede Chukka Boot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVyEiQI7w05sOHvbbCt6TnE1mDqaubEvtBj561l1ItjCe-sZth40XRkVrK6Zp9zjBm5MQ_ZWyKYXif5fG0649oDyO_COrUqrggkkJwC9aOaHJxQpGGPUkiKl60ixF95PHOR_151MQcp3kmn0Ryq9e0y4gHzqHjBwJfMW8tLF-HI_sblqHtzmt22eqqQwGALDzFIfrlTP42WNY7wa0VeenH_0duAY2iL2S674VjvZhWGf9YLVwt8Ec">
+    </div>
+    <div class="pt-space-md space-y-1">
+      <div class="flex items-center gap-space-2xs text-secondary text-label-sm">
+        <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+        <span class="font-bold text-on-surface">4.8</span>
+        <span class="text-on-surface-variant">(89 reviews)</span>
+      </div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-tight group-hover:text-secondary transition-colors">
+        TUSCAN SUEDE CHUKKA BOOT
+      </h3>
+      <p class="font-body-md text-body-md text-on-surface-variant">Tobacco Sand Suede &amp; Crepe Sole</p>
+      <div class="flex items-center gap-space-xs pt-space-2xs">
+        <span class="font-headline-sm text-headline-sm font-bold text-on-surface">$280</span>
+      </div>
+    </div>
+  </div>
+  <div class="pt-space-md">
+    <button class="w-full h-11 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+      ADD TO CART
+    </button>
+  </div>
+</div>
+
+<!-- PRODUCT CARD 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+  <div>
+    <div class="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden flex items-center justify-center">
+      <span class="absolute top-space-xs left-space-xs z-10 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider px-space-xs py-1 rounded">
+        SALE -15%
+      </span>
+      <button aria-label="Add to Wishlist" class="absolute top-space-xs right-space-xs z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-[20px]">favorite</span>
+      </button>
+      <img alt="Pebbled Leather Driving Loafer" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDloH8KIb683p8zG8VUiI9JAHecfqBwePEqqo4H1XTzERslGlv04yMP8vQD5ItQ3t8L1kwpb62wQHisp19aqHCjA3Riwv4MXhklSxctC_GgxFi_1LqxYZ6U7-DqH30mksIUCecwhOUo9mDo6-QFtsiTMv5g2Rj_sHYYLz_uqsP_9Yl2pJjw5RCecdi_WxEpmMIvhe9wJIp5he-SnuApAfSiWi5o8SEfL8bANcWxY4UlGjOL7uK685A">
+    </div>
+    <div class="pt-space-md space-y-1">
+      <div class="flex items-center gap-space-2xs text-secondary text-label-sm">
+        <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+        <span class="font-bold text-on-surface">4.9</span>
+        <span class="text-on-surface-variant">(53 reviews)</span>
+      </div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-tight group-hover:text-secondary transition-colors">
+        PEBBLED LEATHER DRIVING LOAFER
+      </h3>
+      <p class="font-body-md text-body-md text-on-surface-variant">Espresso Brown Moccasin</p>
+      <div class="flex items-center gap-space-xs pt-space-2xs">
+        <span class="font-headline-sm text-headline-sm font-bold text-secondary">$210</span>
+        <span class="font-body-md text-body-md text-outline line-through">$248</span>
+      </div>
+    </div>
+  </div>
+  <div class="pt-space-md">
+    <button class="w-full h-11 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+      ADD TO CART
+    </button>
+  </div>
+</div>
+
+<!-- PRODUCT CARD 5 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+  <div>
+    <div class="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden flex items-center justify-center">
+      <span class="absolute top-space-xs left-space-xs z-10 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-space-xs py-1 rounded">
+        TECHNICAL
+      </span>
+      <button aria-label="Add to Wishlist" class="absolute top-space-xs right-space-xs z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-[20px]">favorite</span>
+      </button>
+      <img alt="Urban Hybrid All-Weather Boot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjWAxF5kNFrqj5UQkQHGYq-1s6nFuUogGB5wLMGofC-XJ9p9mNFgdhSq3P4dsqEdBF07hgFEfuRKcH1jwUZSH4kTWea8cOf4u90cCwmHQM4knPstG43q539uWCLuD9l-wB64_XEUjVxxunMD3rNstvSjJsNixxnqV0HgOhiDgdqyPmGkEqE_Slk_j0xGUgt9O392z-yxe-uZ2djZdQSd_x77K-WMUGnCTvgDmrnKiSSh5yjXdngpU">
+    </div>
+    <div class="pt-space-md space-y-1">
+      <div class="flex items-center gap-space-2xs text-secondary text-label-sm">
+        <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+        <span class="font-bold text-on-surface">4.9</span>
+        <span class="text-on-surface-variant">(78 reviews)</span>
+      </div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-tight group-hover:text-secondary transition-colors">
+        URBAN HYBRID ALL-WEATHER BOOT
+      </h3>
+      <p class="font-body-md text-body-md text-on-surface-variant">Olive Nubuck &amp; Vibram Lug Sole</p>
+      <div class="flex items-center gap-space-xs pt-space-2xs">
+        <span class="font-headline-sm text-headline-sm font-bold text-on-surface">$310</span>
+      </div>
+    </div>
+  </div>
+  <div class="pt-space-md">
+    <button class="w-full h-11 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+      ADD TO CART
+    </button>
+  </div>
+</div>
+
+<!-- PRODUCT CARD 6 -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+  <div>
+    <div class="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden flex items-center justify-center">
+      <span class="absolute top-space-xs left-space-xs z-10 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider px-space-xs py-1 rounded">
+        NEW RELEASE
+      </span>
+      <button aria-label="Add to Wishlist" class="absolute top-space-xs right-space-xs z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-[20px]">favorite</span>
+      </button>
+      <img alt="Slate Minimal Court Sneaker" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDglRyt3ymyJ2KvmJahTQqLcM_AVtsBbSV-psHw-WYOgvRMk0Be5wNDIJA8UF3dEfCNcXd07363inG_eJ5DQ3N3RN2XWkHdWkh5JSuua8G5p6EQ6NSWy_zc4Tf6WlSH3baHwaptREj6h9jaT9OybECeWmrA3ReYzhTj0hsInQf4AuJ1ycOxDK3t-6fOcTjOQaK5931q-uP3fhmAo3YeomrhPZf5In6N2Cx_jmqnP8BilM1-uEdcWlE">
+    </div>
+    <div class="pt-space-md space-y-1">
+      <div class="flex items-center gap-space-2xs text-secondary text-label-sm">
+        <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+        <span class="font-bold text-on-surface">4.8</span>
+        <span class="text-on-surface-variant">(95 reviews)</span>
+      </div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-tight group-hover:text-secondary transition-colors">
+        SLATE MINIMAL COURT SNEAKER
+      </h3>
+      <p class="font-body-md text-body-md text-on-surface-variant">Monochrome Slate Grey &amp; Nappa</p>
+      <div class="flex items-center gap-space-xs pt-space-2xs">
+        <span class="font-headline-sm text-headline-sm font-bold text-on-surface">$195</span>
+      </div>
+    </div>
+  </div>
+  <div class="pt-space-md">
+    <button class="w-full h-11 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+      ADD TO CART
+    </button>
+  </div>
+</div></div>
+<!-- BOTTOM PAGINATION & LOAD MORE -->
+<div class="flex flex-col items-center justify-center space-y-space-lg pt-space-xl">
+<!-- Progress Indicator -->
+<div class="w-full max-w-sm text-center space-y-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Showing 6 of 124 products</span>
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[6.45%]"></div>
+</div>
+</div>
+<!-- Secondary Outlined Load More CTA -->
+
+<!-- Numeric Pagination Bar -->
+<nav aria-label="Catalog Pagination" class="flex items-center gap-space-2xs pt-space-xs">
+<button aria-label="Previous Page" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm">
+              1
+            </button>
+<button class="w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm font-semibold transition-colors">
+              2
+            </button>
+<button class="w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm font-semibold transition-colors">
+              3
+            </button>
+<button class="w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm font-semibold transition-colors">
+              4
+            </button>
+<span class="w-10 h-10 flex items-center justify-center text-on-surface-variant font-label-sm text-label-sm">...</span>
+<button class="w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm font-semibold transition-colors">
+              16
+            </button>
+<button aria-label="Next Page" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</nav>
+</div>
+</main>
+</div>
+</section>
+<!-- EDITORIAL CRAFTSMANSHIP SPOTLIGHT STRIP -->
+<section class="w-full bg-secondary text-on-secondary py-space-3xl">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-7 space-y-space-xs">
+<span class="px-space-xs py-1 rounded bg-black/20 text-on-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold inline-block">EXCLUSIVE ATELIER ACCESS</span>
+<h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-display-xl-mobile md:font-headline-lg text-[28px] md:text-[36px] font-extrabold uppercase tracking-tight text-white leading-tight">GET 10% OFF YOUR FIRST ORDER</h3>
+<p class="font-body-lg text-white/90 max-w-xl">Join the SoleVique syndicate for private batch releases, archival drops, and footwear care guides.</p>
+</div>
+<div class="lg:col-span-5 space-y-space-xs">
+<form class="flex flex-col sm:flex-row gap-space-xs" onsubmit="return false;">
+<input class="flex-1 px-space-md py-space-sm rounded-lg bg-white text-on-surface placeholder:text-outline-variant font-body-md focus:outline-none" placeholder="Enter your email address..." type="email">
+<button class="px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold hover:bg-black/80 transition-colors shrink-0" type="submit">CLAIM 10% OFF</button>
+</form>
+<p class="font-label-sm text-label-sm text-white/70">Zero spam. Unsubscribe anytime.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- JAVASCRIPT FOR GRID TOGGLE INTERACTIVITY -->
+<script>
+    const gridBtn3 = document.getElementById('btn-grid-3');
+    const gridBtn4 = document.getElementById('btn-grid-4');
+    const productGrid = document.getElementById('product-grid');
+
+    if (gridBtn3 && gridBtn4 && productGrid) {
+      gridBtn3.addEventListener('click', () => {
+        productGrid.className = 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-space-lg';
+        gridBtn3.className = 'p-1.5 rounded-md bg-surface-container-lowest shadow-sm text-on-surface hover:text-primary transition-all';
+        gridBtn4.className = 'p-1.5 rounded-md text-on-surface-variant hover:text-on-surface transition-all';
+      });
+
+      gridBtn4.addEventListener('click', () => {
+        productGrid.className = 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md';
+        gridBtn4.className = 'p-1.5 rounded-md bg-surface-container-lowest shadow-sm text-on-surface hover:text-primary transition-all';
+        gridBtn3.className = 'p-1.5 rounded-md text-on-surface-variant hover:text-on-surface transition-all';
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-[#111111] text-on-primary pt-space-4xl pb-space-2xl border-t border-surface-container-highest/10">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl pb-space-3xl border-b border-surface-container-highest/20">
+<div class="lg:col-span-4 space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold tracking-tighter">SV</div>
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-primary uppercase font-bold">SOLEVIQUE</span>
+</div>
+<p class="font-body-md text-body-md text-surface-container-high max-w-sm">Architecturally sculpted footwear engineered in Civitanova Marche, Italy for all-day cadence and quiet luxury.</p>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a aria-label="Instagram" class="w-9 h-9 rounded-lg bg-surface-container-highest/10 hover:bg-secondary flex items-center justify-center text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a>
+<a aria-label="X" class="w-9 h-9 rounded-lg bg-surface-container-highest/10 hover:bg-secondary flex items-center justify-center text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">tag</span></a>
+<a aria-label="Pinterest" class="w-9 h-9 rounded-lg bg-surface-container-highest/10 hover:bg-secondary flex items-center justify-center text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">push_pin</span></a>
+<a aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-surface-container-highest/10 hover:bg-secondary flex items-center justify-center text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">work</span></a>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-space-lg">
+<div class="space-y-space-md">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-surface-variant font-bold">Shop</h4>
+<ul class="space-y-space-xs font-body-md text-body-md">
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Men's Collection</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Women's Collection</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">New Arrivals</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Best Sellers</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Archival Series</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div class="space-y-space-md">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-surface-variant font-bold">Company</h4>
+<ul class="space-y-space-xs font-body-md text-body-md">
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Our Story</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Civitanova Atelier</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Sustainable Hides</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Materials &amp; Ergonomics</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Press</a></li>
+</ul>
+</div>
+<div class="space-y-space-md">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-surface-variant font-bold">Support</h4>
+<ul class="space-y-space-xs font-body-md text-body-md">
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Track Order</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Shipping &amp; Delivery</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Size Guide</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Shoe Care</a></li>
+</ul>
+</div>
+<div class="space-y-space-md">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-surface-variant font-bold">Legal</h4>
+<ul class="space-y-space-xs font-body-md text-body-md">
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Terms of Service</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Accessibility</a></li>
+<li class=""><a class="text-surface-container-high hover:text-on-primary transition-colors" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="font-body-md text-body-md text-surface-container-high">© 2025 SoleVique Atelier S.r.l. All rights reserved. Precision craftsmanship.</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-surface-container-high font-label-sm text-label-sm">
+<span class="px-space-xs py-space-2xs bg-surface-container-highest/10 rounded tracking-wider">VISA</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-highest/10 rounded tracking-wider">MC</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-highest/10 rounded tracking-wider">AMEX</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-highest/10 rounded tracking-wider">APPLE PAY</span>
+</div>
+<div class="flex items-center gap-space-2xs text-surface-container-high font-label-sm text-label-sm py-1 px-space-xs rounded bg-surface-container-highest/10">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span class="">Global // USD $</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+  <script src="main.js"></script>
+</body></html>

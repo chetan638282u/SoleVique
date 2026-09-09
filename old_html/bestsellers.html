@@ -1,0 +1,703 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-fixed": "#e3e1ec",
+          "outline-variant": "#c8c5cb",
+          "error-container": "#ffdad6",
+          "surface-tint": "#5f5e61",
+          "on-surface-variant": "#47464b",
+          "surface-variant": "#e5e2dd",
+          "background": "#fcf9f4",
+          "primary-container": "#1b1b1e",
+          "error": "#ba1a1a",
+          "primary-fixed": "#e4e1e6",
+          "inverse-on-surface": "#f3f0eb",
+          "surface-dim": "#dcdad5",
+          "on-surface": "#1c1c19",
+          "on-tertiary": "#ffffff",
+          "surface": "#fcf9f4",
+          "outline": "#77767b",
+          "surface-container-low": "#f6f3ee",
+          "tertiary": "#000000",
+          "on-secondary": "#ffffff",
+          "on-error": "#ffffff",
+          "on-tertiary-container": "#83838c",
+          "secondary": "#a23e18",
+          "on-secondary-container": "#6f2000",
+          "on-secondary-fixed": "#390c00",
+          "on-tertiary-fixed": "#1a1b22",
+          "on-primary-fixed-variant": "#47464a",
+          "tertiary-fixed-dim": "#c6c5cf",
+          "surface-container-high": "#ebe8e3",
+          "on-background": "#1c1c19",
+          "primary": "#000000",
+          "surface-container-highest": "#e5e2dd",
+          "inverse-primary": "#c8c5ca",
+          "inverse-surface": "#31302d",
+          "on-primary": "#ffffff",
+          "tertiary-container": "#1a1b22",
+          "primary-fixed-dim": "#c8c5ca",
+          "secondary-fixed-dim": "#ffb59c",
+          "surface-container": "#f0ede9",
+          "on-tertiary-fixed-variant": "#46464e",
+          "secondary-container": "#fe8357",
+          "surface-container-lowest": "#ffffff",
+          "on-primary-container": "#858387",
+          "secondary-fixed": "#ffdbcf",
+          "surface-bright": "#fcf9f4",
+          "on-secondary-fixed-variant": "#822801",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#1b1b1e"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.75rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "1.5rem",
+          "margin-desktop": "3rem",
+          "space-md": "1rem",
+          "space-2xs": "0.25rem",
+          "space-2xl": "3rem",
+          "margin-mobile": "1.25rem",
+          "space-4xl": "6rem",
+          "gutter-mobile": "1rem",
+          "space-xs": "0.5rem",
+          "space-3xl": "4.5rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "display-xl-mobile": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-xl": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-xl-mobile": [
+            "36px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="bg-primary text-on-primary py-space-xs px-margin-mobile lg:px-margin-desktop"><div class="max-w-[1360px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-space-xs"><div class="flex items-center gap-space-sm"><span class="bg-secondary px-space-xs py-space-2xs rounded text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">Drop</span><span class="font-label-sm text-label-sm uppercase tracking-wider">NEW TIER 0 DROP LIVE: ARCH-SERIES 01</span></div><div class="hidden md:flex items-center gap-space-lg"><span class="font-label-sm text-label-sm text-surface-container-high tracking-wider">Worldwide Complimentary Express Shipping on Orders Above $150</span><div class="flex items-center gap-space-md"><a class="font-label-sm text-label-sm text-surface-container-highest hover:text-on-primary transition-colors uppercase tracking-wider" data-path="flagships" href="#">Flagships</a><a class="font-label-sm text-label-sm text-surface-container-highest hover:text-on-primary transition-colors uppercase tracking-wider" data-path="client-care" href="#">Client Care</a></div></div></div></div><div class="h-20 max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold tracking-tighter">SV</div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold">SOLEVIQUE</span></a><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-on-surface font-semibold"><a aria-current="page" class="uppercase tracking-wider transition-colors py-space-xs text-on-surface font-semibold" data-path="men-catalog" href="#">Men</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="women-catalog" href="#">Women</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="new-arrivals" href="#">New Arrivals</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="collections" href="#">Collections</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="sale" href="#">Sale</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-2xs py-space-xs px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">language</span><span class="">USD ($)</span></div><button aria-label="Search" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">search</span></button><a aria-label="Profile" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="account" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a><a aria-label="Cart" class="relative w-10 h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="cart-drawer" href="#"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] flex items-center justify-center leading-none">3</span></a></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Hero & Atelier Status Section -->
+<section class="w-full bg-surface-container-low py-space-2xl md:py-space-3xl">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left: Editorial Headlines -->
+<div class="lg:col-span-8 space-y-space-md">
+
+<h1 class="font-display-xl text-display-xl tracking-tight text-on-surface uppercase font-extrabold">
+            THE BESTSELLERS &amp; ICONS
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Our most coveted zero-drop anatomical silhouettes, crafted by master cordwainers in Civitanova Marche. Proven endurance, architectural calfskin, and timeless understated cadence.
+          </p>
+<!-- Quick Filter Pills -->
+<div class="pt-space-sm flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-transform active:scale-95">
+              All Bestsellers (48)
+            </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm">
+              Heritage Court Sneakers (18)
+            </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm">
+              Italian Penny Loafers (12)
+            </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm">
+              Architectural Slides (8)
+            </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm">
+              Studio Chelsea &amp; Clogs (10)
+            </button>
+</div>
+</div>
+<!-- Right: Atelier Batch Status Card -->
+
+</div>
+</div>
+</section>
+<!-- Sub-Bar / Active Filters Strip -->
+<section class="w-full bg-surface-container py-space-sm">
+
+</section>
+<!-- Main Body: Two-Column Filter & Grid -->
+<section class="w-full py-space-2xl">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Sidebar Filter Panel (Col span 3 ~ 25%) -->
+<aside class="lg:col-span-3 space-y-space-lg bg-surface-container-low p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<span class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight text-on-surface">FILTERS</span>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">3</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-bold uppercase tracking-wider">
+              CLEAR ALL
+            </button>
+</div>
+<!-- Accordion 1: Category -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between cursor-pointer">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Category</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">keyboard_arrow_up</span>
+</div>
+<div class="space-y-2.5 font-body-md text-body-md text-on-surface-variant">
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-2 text-on-surface font-medium">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                  Court &amp; Heritage Sneakers
+                </span>
+<span class="text-xs text-on-surface-variant">18</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-2 text-on-surface font-medium">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                  Penny Loafers &amp; Moccasins
+                </span>
+<span class="text-xs text-on-surface-variant">12</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-2 text-on-surface-variant group-hover:text-on-surface">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                  Sculptural Slides &amp; Mules
+                </span>
+<span class="text-xs text-on-surface-variant">8</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-2 text-on-surface-variant group-hover:text-on-surface">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                  Chelsea Boots &amp; Clogs
+                </span>
+<span class="text-xs text-on-surface-variant">10</span>
+</label>
+</div>
+</div>
+<!-- Accordion 2: Size (EU) Selector -->
+<div class="space-y-space-sm pt-space-md border-t border-surface-container-highest">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Size (EU)</span>
+<button class="font-label-sm text-label-sm text-secondary underline hover:opacity-80">Fit Guide</button>
+</div>
+<div class="grid grid-cols-5 gap-1.5">
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">36</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">37</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">38</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">39</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">40</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">41</button>
+<button class="h-10 rounded bg-primary text-on-primary font-label-md text-label-md shadow-md font-bold">42</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">43</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">44</button>
+<button class="h-10 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm">45</button>
+</div>
+</div>
+<!-- Accordion 3: Color Palette Swatches -->
+
+<!-- Accordion 4: Price Range Slider -->
+<div class="space-y-space-sm pt-space-md border-t border-surface-container-highest">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Price Range</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">$165 — $310</span>
+</div>
+<!-- Slider simulation -->
+<div class="relative pt-2 pb-1">
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden relative">
+<div class="absolute left-1/4 right-1/4 h-full bg-primary rounded-full"></div>
+</div>
+<div class="absolute top-1/2 -mt-0.5 left-1/4 w-4 h-4 rounded-full bg-primary shadow-md -translate-x-1/2 cursor-grab"></div>
+<div class="absolute top-1/2 -mt-0.5 right-1/4 w-4 h-4 rounded-full bg-primary shadow-md translate-x-1/2 cursor-grab"></div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<div class="flex-1 bg-surface-container-lowest px-3 py-1.5 rounded text-xs font-semibold text-on-surface shadow-sm">
+                Min: $165
+              </div>
+<span class="text-on-surface-variant font-label-sm text-label-sm">—</span>
+<div class="flex-1 bg-surface-container-lowest px-3 py-1.5 rounded text-xs font-semibold text-on-surface shadow-sm">
+                Max: $310
+              </div>
+</div>
+</div>
+<!-- Accordion 5: Material & Craft -->
+<div class="space-y-space-sm pt-space-md border-t border-surface-container-highest">
+<div class="flex items-center justify-between cursor-pointer">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Material &amp; Craft</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">keyboard_arrow_up</span>
+</div>
+<div class="space-y-2.5 font-body-md text-body-md text-on-surface-variant">
+<label class="flex items-center gap-2 cursor-pointer text-on-surface font-medium">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                Full-Grain Italian Calfskin
+              </label>
+<label class="flex items-center gap-2 cursor-pointer text-on-surface font-medium">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                Tuscan Tanned Vachetta
+              </label>
+<label class="flex items-center gap-2 cursor-pointer text-on-surface-variant hover:text-on-surface">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                Zero-Drop Anatomical Foam
+              </label>
+<label class="flex items-center gap-2 cursor-pointer text-on-surface-variant hover:text-on-surface">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                Hand-Buffed Crepe Rubber
+              </label>
+</div>
+</div>
+<!-- Accordion 6: Badge / Drop Status -->
+<div class="space-y-space-sm pt-space-md border-t border-surface-container-highest">
+<div class="flex items-center justify-between cursor-pointer">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-on-surface">Icon Tier Status</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">keyboard_arrow_up</span>
+</div>
+<div class="space-y-2.5 font-body-md text-body-md text-on-surface-variant">
+<label class="flex items-center gap-2 cursor-pointer text-on-surface font-medium">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                Hall of Fame Icon
+              </label>
+<label class="flex items-center gap-2 cursor-pointer text-on-surface-variant hover:text-on-surface">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+                Limited Replenishment
+              </label>
+</div>
+</div>
+</aside>
+<!-- Right Product Grid (Col span 9 ~ 75%) -->
+<main class="lg:col-span-9">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Arch-Court Sneaker 01 -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-lowest mb-space-md">
+<img alt="Arch-Court Sneaker 01" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1XXTxSC4UwqRVgUpIQxJD34urXJF0b8ZJNuThj9KPv93qjgU_zLTuAv1CiQXXHatb-IDDn6g8d_MUFvzM7LTWx6jK9wvTqMw6nFxS6_ydhXRi-9aLJ7uwHH-w4xF99iCeIv57S0c_QWfgQO_JmPuawKupOru53BrTy05CZpxmT5HgnBz3ZPNMiYgFqLlBkmxFIapls7KdO6FeESdBOkk__wqMQa-Shghr9y5aeZjkyPlBOcLKUtNU48wg">
+<span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider">
+                    ALL-TIME #1 BESTSELLER
+                  </span>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="text-secondary">★</span> 4.9 <span class="text-on-surface-variant/70 font-normal">(428 reviews)</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$195</span>
+</div>
+<h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors">
+                    ARCH-COURT SNEAKER 01
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">
+                    Chalk White &amp; Tuscan Terracotta
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-highest">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface transition-all flex items-center justify-center gap-2 active:scale-98">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  Add to Cart
+                </button>
+</div>
+</div>
+<!-- Card 2: The Tuscan Penny Loafer -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-lowest mb-space-md">
+<img alt="The Tuscan Penny Loafer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1XdHRJ-QMiJuy4HM9Vm2XkyEn_Ea2z0VhnWPql4cO_F254N-z46b5cTMpZiaUuRJDcsxr3u0JjkkG2Xgthml5ms5h48k-5r9plMBoOupcsUniPPrT730hdPq8X6HUBu-tEkd0F_RmnD-q4tQ4NYYiOCr9bd0qGorYy6535PbC49p3M__6yZiXnmpgwYVzAtideiz92Rbz6ugHPpWKCh4GOBAVbHsBIzALgti0vj4DUWAGHnjPoyiF5U">
+<span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                    ATELIER ICON
+                  </span>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="text-secondary">★</span> 5.0 <span class="text-on-surface-variant/70 font-normal">(314 reviews)</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$245</span>
+</div>
+<h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors">
+                    THE TUSCAN PENNY LOAFER
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">
+                    Rich Burnished Espresso Calfskin
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-highest">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface transition-all flex items-center justify-center gap-2 active:scale-98">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  Add to Cart
+                </button>
+</div>
+</div>
+<!-- Card 3: Architectural Cross Slide -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-lowest mb-space-md">
+<img alt="Architectural Cross Slide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1UavVRWFvU4PtXGrGmPvTxpk3icUXNcbyXLscu9Mr1xIZ34xOOOwpqEjePgDSvqfnqxaMpexBNEAD3QiZJlThqxNn4i0FD74oQ-PFnKZtloiptLEjJth59lZdMb2ZryZgAZFLuzi3M7_oARXw0fO8wsex7z3I7-x55S87ntJFKQnv-DDQtC1x8T0PBGsGQFHxpSZ94DKDoxQFzERMat1sK6tcXzlNRc0SKFvrLoSc08MfDnhc_8otuxDg">
+<span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                    SUMMER CLASSIC
+                  </span>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="text-secondary">★</span> 4.9 <span class="text-on-surface-variant/70 font-normal">(196 reviews)</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$165</span>
+</div>
+<h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors">
+                    ARCHITECTURAL CROSS SLIDE
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">
+                    Buttery Nude Tan Nappa Leather
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-highest">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface transition-all flex items-center justify-center gap-2 active:scale-98">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  Add to Cart
+                </button>
+</div>
+</div>
+<!-- Card 4: Zero-Drop Velvet Runner -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-lowest mb-space-md">
+<img alt="Zero-Drop Velvet Runner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1UQS4KtDwBFYPuUM4A1Ag-AcmBxjIHjAFmuUk270PBZRccFIO2sOBx5jTrs_EWFKWmFcreI-_guftRc-F-CzVlREfptfYvjMXWa_OSDEoYdBnKez2BjuEPlMDTBT59zK4Slu_5n14xomVgodtozfnTfp6wMGPMAwc5vrf1RoK5V2cWSmf5ztwo-SfvhyTk2Wmv68bf6sOkdjFwv3GXQbJSvcfdIfm1H7ra907FiHYZuY9NWN6_1V00ewQ">
+<span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                    PERFORMANCE ESSENTIAL
+                  </span>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="text-secondary">★</span> 4.8 <span class="text-on-surface-variant/70 font-normal">(280 reviews)</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$220</span>
+</div>
+<h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors">
+                    ZERO-DROP VELVET RUNNER
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">
+                    Oatmeal Cream &amp; Sand Nubuck
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-highest">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface transition-all flex items-center justify-center gap-2 active:scale-98">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  Add to Cart
+                </button>
+</div>
+</div>
+<!-- Card 5: Nomad Suede Chelsea Sneaker (Exclusive) -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-lowest mb-space-md">
+<img alt="Nomad Suede Chelsea Sneaker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxULxvvbNiSOOgpla0Q7mj7Oa2neFPd0dEqu-tu_IMlXXeVdjkQHdoIlkOIjeLECOVdwuTPkNwyiwV54BrQI25V4GXn8r5FAuhBVeFGLqHxp5nHx0UA-MSPR5HU32ZfR7-b8kVgSV6iicG-pVrNQt9shtXlUkZNPupS_TDKip5ImEDR6GVKSlMmIokCjNg_PI0JEjfItwuimxBPT9vp-0aM0_e5FlVtIhpJrrmzcG9S5zSih04nJU">
+<span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider">
+                    ARCHIVE EXCLUSIVE
+                  </span>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="text-secondary">★</span> 4.9 <span class="text-on-surface-variant/70 font-normal">(152 reviews)</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$265</span>
+</div>
+<h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors">
+                    NOMAD SUEDE CHELSEA SNEAKER
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">
+                    Warm Sand Italian Suede &amp; Crepe Sole
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-highest">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface transition-all flex items-center justify-center gap-2 active:scale-98">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  Add to Cart
+                </button>
+</div>
+</div>
+<!-- Card 6: Verona Brass Buckle Clog Mule (Exclusive) -->
+<div class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-lowest mb-space-md">
+<img alt="Verona Brass Buckle Clog Mule" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA81pT7QKLQQlK3m6IDegfZ3mw79xA3_0JnMnmx-xLVvLBlwlIWwfeLjrPwC5pKPKXZ-MeoyOA2CTPv3EO9FeVzKO06M2huzQvtEFG8_PigavCVKQ28NXuPxGm9V5Z2JH8YQ2NZ50eOs0g8ysIPqRANtSy0x0vwVBs-ujk7thCMmVsowFCca_rgD_zPatZpCvLBBobi_KuvStypRkfwgnfkChhKxfyok6tU1aXMmAckpqCQejYA1gM">
+<span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                    CRAFT EDITION
+                  </span>
+<button aria-label="Add to wishlist" class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-secondary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="text-secondary">★</span> 4.9 <span class="text-on-surface-variant/70 font-normal">(118 reviews)</span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$210</span>
+</div>
+<h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors">
+                    VERONA BRASS BUCKLE CLOG MULE
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">
+                    Polished Cognac Calfskin &amp; Anatomical Cork
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-highest">
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface transition-all flex items-center justify-center gap-2 active:scale-98">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  Add to Cart
+                </button>
+</div>
+</div>
+</div>
+<!-- Pagination & Progress Area -->
+<div class="mt-space-2xl pt-space-xl border-t border-surface-container-highest flex flex-col items-center space-y-space-md">
+<div class="text-center space-y-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Showing 6 of 48 Iconic Products</span>
+<div class="w-48 h-1 bg-surface-container rounded-full mx-auto overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 12.5%;"></div>
+</div>
+</div>
+
+<!-- Numbered Pagination -->
+<div class="flex items-center gap-1.5 pt-space-xs">
+<button class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md font-bold">
+                1
+              </button>
+<button class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">
+                2
+              </button>
+<button class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">
+                3
+              </button>
+<span class="w-9 h-9 flex items-center justify-center text-on-surface-variant font-label-md">...</span>
+<button class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">
+                8
+              </button>
+<button class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</section>
+<!-- 3 Atelier Trust Pillars -->
+<section class="bg-[#A8421E] text-white py-14 px-6 md:px-12 mt-16">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+    <div class="max-w-xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/30 text-[11px] font-semibold tracking-widest uppercase mb-4 text-white/90">
+        <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+        Exclusive Atelier Access
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">GET 10% OFF YOUR FIRST ORDER</h2>
+      <p class="text-white/80 text-sm leading-relaxed">Join the SoleVique syndicate for private batch releases, archival drops, and footwear care guides.</p>
+    </div>
+    <div class="w-full lg:w-auto">
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md w-full" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="Enter your email address..." class="px-5 py-3.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:bg-white/20 flex-1 text-sm">
+        <button type="submit" class="bg-black hover:bg-black/90 text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-lg whitespace-nowrap transition-colors shadow-sm">CLAIM 10% OFF</button>
+      </form>
+      <p class="text-white/60 text-[11px] mt-2">Zero spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+</div></main><footer class="bg-[#111111] text-zinc-400 py-16 px-6 md:px-12 border-t border-zinc-800">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 mb-14">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2.5 text-white font-black text-xl tracking-wider mb-4">
+        <span class="w-8 h-8 rounded bg-white text-black flex items-center justify-center font-bold text-sm">SV</span>
+        SOLEVIQUE
+      </div>
+      <p class="text-zinc-400 text-sm leading-relaxed max-w-sm mb-6">
+        Anatomical luxury footwear hand-finished in Civitanova Marche, Italy. Zero-drop engineering balanced with archival Tuscan cordwaining.
+      </p>
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="#" class="hover:text-white transition-colors" aria-label="Instagram">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+        </a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="X">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="text-white text-xs font-bold uppercase tracking-widest mb-4">Shop</h3>
+      <ul class="space-y-2.5 text-sm">
+        <li class=""><a href="#" class="hover:text-white transition-colors">All Bestsellers</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Court Sneakers</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Penny Loafers</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Architectural Slides</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Chelsea Boots &amp; Clogs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="text-white text-xs font-bold uppercase tracking-widest mb-4">Atelier &amp; Craft</h3>
+      <ul class="space-y-2.5 text-sm">
+        <li class=""><a href="#" class="hover:text-white transition-colors">Civitanova Workshop</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Zero-Drop Philosophy</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Tuscan Leather Sourcing</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Care &amp; Conditioning</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 onclick="window.location.href='product.html'" style="cursor:pointer;" class="text-white text-xs font-bold uppercase tracking-widest mb-4">Client Care</h3>
+      <ul class="space-y-2.5 text-sm">
+        <li class=""><a href="#" class="hover:text-white transition-colors">Complimentary Shipping</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Exchanges &amp; Returns</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Sizing &amp; Fit Guide</a></li>
+        <li class=""><a href="#" class="hover:text-white transition-colors">Concierge Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto pt-8 border-t border-zinc-800/80 flex flex-col md:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
+    <div class="">© 2025 SoleVique Atelier. All rights reserved. Handcrafted in Civitanova Marche, Italy.</div>
+    <div class="flex items-center gap-6">
+      <span class="">USD ($) / United States</span>
+      <div class="flex items-center gap-2 text-zinc-300 font-semibold text-[10px] tracking-wider">
+        <span class="">VISA</span> • <span class="">MC</span> • <span class="">AMEX</span> • <span class="">APPLE PAY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+  <script src="main.js"></script>
+</body></html>
