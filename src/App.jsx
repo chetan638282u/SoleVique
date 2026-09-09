@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Men from './pages/Men'
@@ -38,6 +38,7 @@ function App() {
           <Route path="sale" element={<Sale />} />
           <Route path="product" element={<Product />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
         </Routes>
       </CartProvider>
