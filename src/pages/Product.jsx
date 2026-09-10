@@ -2,6 +2,7 @@ import React from 'react';
 import PriceDisplay from '../components/PriceDisplay';
 import { useCart } from '../context/CartContext';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { products } from '../data/products';
 
 export default function Product() {
   const location = useLocation();
@@ -15,7 +16,8 @@ export default function Product() {
   const [quantity, setQuantity] = React.useState(1);
   const [isSizeGuideOpen, setIsSizeGuideOpen] = React.useState(false);
   const [isDescOpen, setIsDescOpen] = React.useState(false);
-  const navigate = useNavigate();
+
+    const navigate = useNavigate();
   const { addToCart } = useCart();
 
   React.useEffect(() => {
@@ -29,7 +31,7 @@ export default function Product() {
 <section className="max-w-[1360px] w-full mx-auto px-margin-desktop py-space-xl">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
 
-<div className="lg:col-span-7 flex flex-col-reverse md:flex-row gap-space-sm relative lg:sticky top-[136px]">
+<div className="lg:col-span-7 flex flex-col-reverse md:flex-row gap-space-sm relative lg:sticky lg:top-[136px]">
 
 <div className="flex md:flex-col gap-space-xs shrink-0 overflow-x-auto md:overflow-visible pb-1 md:pb-0" id="thumbnail-strip">
 <button className="thumb-btn relative w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden bg-surface-container-lowest p-1 shadow-sm transition-all duration-200 ring-2 ring-primary ring-offset-2 ring-offset-surface"  type="button">
@@ -45,18 +47,19 @@ export default function Product() {
 <div className="absolute top-space-md left-space-md flex flex-col gap-1.5 z-10">
 </div>
 
-<div className="absolute top-space-md right-space-md flex items-center gap-2 z-10">
-<button className="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface shadow-sm hover:shadow-md flex items-center justify-center transition-all"  title="Inspect High Resolution" type="button">
-<span className="material-symbols-outlined text-[18px]">zoom_in</span>
-</button>
+<div 
+  className="relative w-full h-full flex items-center justify-center" 
+  id="main-gallery-viewport"
+>
+<img 
+  alt={product.name} 
+  className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_25px_rgba(0,0,0,0.12)]" 
+  id="main-product-img" 
+  src={product.image}  
+/>
 </div>
-
-<div className="relative w-full h-full flex items-center justify-center" id="main-gallery-viewport">
-<img alt={product.name} className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_25px_rgba(0,0,0,0.12)] p-2" id="main-product-img" src={product.image}  />
 </div>
 </div>
-</div>
-
 
 <div className="lg:col-span-5 flex flex-col gap-6 font-sans">
 
@@ -192,38 +195,6 @@ export default function Product() {
 </div>
 </section>
 
-<section className="w-full bg-surface-container-highest relative overflow-hidden py-space-lg">
-<div className="max-w-[1360px] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-space-lg items-center">
-<div className="flex flex-col gap-space-xs">
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Provenance • Italy</span>
-<h2 className="font-headline-md text-headline-md text-on-surface font-bold">Crafted in Civitanova Marche</h2>
-<p className="font-body-md text-body-md text-on-surface-variant">
-          Produced in small batches of 180 pairs by multi-generational cordwainers using centuries-old strobel techniques combined with precision laser skiving.
-        </p>
-</div>
-
-<div className="flex flex-col items-center justify-center p-space-md bg-[#F4F4F4]">
-<svg className="w-full max-w-[240px] h-28 text-on-surface" fill="none" viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 75C40 75 70 73 95 72C130 70 170 65 210 60C220 58 225 50 220 40C210 25 180 20 150 28C130 33 110 38 90 40C70 42 40 45 30 55C20 65 20 75 20 75Z" stroke="currentColor" stroke-dasharray="4 2" strokeWidth="2"></path>
-<path d="M20 75L215 75C225 75 228 68 220 60" stroke="#a23e18" strokeWidth="2.5"></path>
-<circle cx="50" cy="55" fill="#a23e18" r="4"></circle>
-<circle cx="160" cy="35" fill="#1c1c19" r="4"></circle>
-<circle cx="110" cy="72" fill="#a23e18" r="3"></circle>
-<text fill="#77767b" font-family="Plus Jakarta Sans" font-size="9" font-weight="700" x="35" y="92">ZERO-DROP SOLE</text>
-<text fill="#77767b" font-family="Plus Jakarta Sans" font-size="9" font-weight="700" x="145" y="18">ANATOMICAL VAMP</text>
-</svg>
-<span className="font-label-sm text-[10px] tracking-wider uppercase text-on-surface-variant mt-0.5">Biomechanical Last Calibration</span>
-</div>
-<div className="flex flex-col gap-space-xs">
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Circularity</span>
-<h2 className="font-headline-md text-headline-md text-on-surface font-bold">Recraftable Philosophy</h2>
-<p className="font-body-md text-body-md text-on-surface-variant">
-          Engineered to be resoled indefinitely. When your cupsole reaches end-of-life, return it to our Civitanova atelier for our factory renewal program.
-        </p>
-</div>
-</div>
-</section>
-
 <section className="max-w-[1360px] w-full mx-auto px-margin-desktop py-space-xl">
 <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
 <div>
@@ -242,53 +213,20 @@ export default function Product() {
 </div>
 
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-<Link to="/product" state={{ name: "Retro Low GAT Trainer", price: 225, image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop" }} className="flex flex-col cursor-pointer group">
-  <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-6 relative">
-    <img alt="Retro Low GAT Trainer" className="w-full h-full object-contain" src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop" />
-    <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" type="button">
-      Add to Cart
-    </button>
-  </div>
-  <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1">Retro Low GAT Trainer</p>
-  <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={225} /></p>
-</Link>
-
-<Link to="/product" state={{ name: "Oxblood Double Monk Strap", price: 345, image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" }} className="flex flex-col cursor-pointer group">
-  <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-6 relative">
-    <img alt="Oxblood Double Monk Strap" className="w-full h-full object-contain" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" />
-    <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" type="button">
-      Add to Cart
-    </button>
-  </div>
-  <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1">Oxblood Double Monk Strap</p>
-  <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={345} /></p>
-</Link>
-
-<Link to="/product" state={{ name: "Tuscan Suede Chukka Boot", price: 280, image: "https://images.unsplash.com/photo-1508296695146-257a814050b4?q=80&w=800&auto=format&fit=crop" }} className="flex flex-col cursor-pointer group">
-  <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-6 relative">
-    <img alt="Tuscan Suede Chukka Boot" className="w-full h-full object-contain" src="https://images.unsplash.com/photo-1508296695146-257a814050b4?q=80&w=800&auto=format&fit=crop" />
-    <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" type="button">
-      Add to Cart
-    </button>
-  </div>
-  <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1">Tuscan Suede Chukka Boot</p>
-  <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={280} /></p>
-</Link>
-
-<Link to="/product" state={{ name: "Pebbled Leather Driving Loafer", price: 210, image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800&auto=format&fit=crop" }} className="flex flex-col cursor-pointer group">
-  <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-6 relative">
-    <img alt="Pebbled Leather Driving Loafer" className="w-full h-full object-contain" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800&auto=format&fit=crop" />
-    <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" type="button">
-      Add to Cart
-    </button>
-  </div>
-  <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1">Pebbled Leather Driving Loafer</p>
-  <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={210} /></p>
-</Link>
+{products.filter(p => p.name !== product.name).slice(0, 4).map((relatedProduct, idx) => (
+  <Link key={idx} to="/product" state={{ name: relatedProduct.name, price: relatedProduct.price, image: relatedProduct.image, categories: relatedProduct.categories, sizes: relatedProduct.sizes }} className="flex flex-col cursor-pointer group">
+    <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-6 relative">
+      <img alt={relatedProduct.name} className="w-full h-full object-contain" src={relatedProduct.image} />
+      <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 lg:group-hover:opacity-100 active:opacity-100 transition-opacity duration-300" type="button" onClick={(e) => { e.preventDefault(); addToCart(relatedProduct, 1, relatedProduct.sizes?.[0] || '8'); }}>
+        Add to Cart
+      </button>
+    </div>
+    <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1 truncate">{relatedProduct.name}</p>
+    <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={relatedProduct.price} /></p>
+  </Link>
+))}
 </div>
 </section>
-
-
 
 {isSizeGuideOpen && (
 <div className="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-4" id="size-guide-modal">
@@ -341,7 +279,6 @@ export default function Product() {
 <span className="font-body-md text-[12px] opacity-80" id="toast-desc">Added to your personal atelier curation.</span>
 </div>
 </div>
-
 
 </div>
     </>
