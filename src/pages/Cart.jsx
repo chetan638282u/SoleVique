@@ -34,7 +34,7 @@ export default function Cart() {
                     {/* Left: Image & In Stock */}
                     <div className="w-full sm:w-48 flex flex-col items-center flex-shrink-0">
                       <div className="w-full aspect-square bg-[#F4F4F4] p-4 flex items-center justify-center">
-                        <img alt={item.name} className="w-full h-full object-contain" src={item.image} />
+                        <img alt={item.name} className="w-full h-full object-contain pointer-events-none select-none" src={item.image} />
                       </div>
                       <div className="mt-3 flex items-center gap-1 border border-[#586337] text-[#586337] px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider self-start sm:self-center">
                         <span className="material-symbols-outlined text-[14px]">check_circle</span>

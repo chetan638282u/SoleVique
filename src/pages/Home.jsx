@@ -89,8 +89,8 @@ Up to 30% Off Selected New Arrivals
     {trendingProducts.map((product, idx) => (
       <Link key={idx} to="/product" state={{ name: product.name, price: product.price, image: product.image }} className="flex flex-col cursor-pointer group min-w-[calc(50%-5px)] md:min-w-[340px] lg:min-w-[400px] snap-start">
         <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-2 md:p-6 relative">
-          <img alt={product.name} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" src={product.image} />
-          <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs opacity-0 lg:group-hover:opacity-100 active:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2" type="button" onClick={(e) => { e.preventDefault(); addToCart(product, 1, product.sizes?.[0] || '8'); }}>Add to Bag</button>
+          <img alt={product.name} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 pointer-events-none select-none" src={product.image} />
+          <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs opacity-0 lg:group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2" type="button" onClick={(e) => { e.preventDefault(); addToCart(product, 1, product.sizes?.[0] || '8'); }}>Add to Bag</button>
         </div>
         <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1 truncate">{product.name}</p>
         <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={product.price} /></p>

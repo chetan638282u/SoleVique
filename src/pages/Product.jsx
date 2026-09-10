@@ -35,7 +35,7 @@ export default function Product() {
 
 <div className="flex md:flex-col gap-space-xs shrink-0 overflow-x-auto md:overflow-visible pb-1 md:pb-0" id="thumbnail-strip">
 <button className="thumb-btn relative w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden bg-surface-container-lowest p-1 shadow-sm transition-all duration-200 border-2 border-brand-black"  type="button">
-<img alt={product.name} className="w-full h-full object-contain mix-blend-multiply" src={product.image} />
+<img alt={product.name} className="w-full h-full object-contain mix-blend-multiply pointer-events-none select-none" src={product.image} />
 <span className="sr-only">View Lateral Profile</span>
 </button>
 </div>
@@ -53,7 +53,7 @@ export default function Product() {
 >
 <img 
   alt={product.name} 
-  className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_25px_rgba(0,0,0,0.12)]" 
+  className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_25px_rgba(0,0,0,0.12)] pointer-events-none select-none" 
   id="main-product-img" 
   src={product.image}  
 />
@@ -61,7 +61,7 @@ export default function Product() {
 </div>
 </div>
 
-<div className="lg:col-span-5 flex flex-col gap-6 font-sans">
+<div className="lg:col-span-5 flex flex-col gap-4 font-sans">
 
   {/* Brand Header & Title */}
   <div className="flex flex-col gap-1">
@@ -91,13 +91,13 @@ export default function Product() {
   </div>
 
   {/* Color Selection */}
-  <div className="flex items-center gap-2 mt-4 text-sm">
+  <div className="flex items-center gap-2 text-sm">
     <span className="text-neutral-500">Color:</span>
     <span className="text-brand-black">Standard Edition</span>
   </div>
 
   {/* Size Selection */}
-  <div className="flex flex-col gap-2 mt-4">
+  <div className="flex flex-col gap-2">
     <span className="text-sm text-neutral-500 mb-1">Size</span>
     <div className="flex flex-wrap gap-2">
       {['6', '7', '8', '9', '10'].map(size => (
@@ -118,7 +118,7 @@ export default function Product() {
   </div>
 
   {/* Quantity */}
-  <div className="flex flex-col gap-2 mt-4">
+  <div className="flex flex-col gap-2">
     <span className="text-sm text-neutral-500 mb-1">Quantity</span>
     <div className="flex items-center border border-neutral-400 w-32 h-12">
       <button 
@@ -140,7 +140,7 @@ export default function Product() {
   </div>
 
   {/* Actions */}
-  <div className="flex flex-col gap-3 mt-6">
+  <div className="flex flex-col gap-3">
     <button 
       onClick={() => addToCart(product, quantity, selectedSize)}
       type="button"
@@ -216,8 +216,8 @@ export default function Product() {
 {products.filter(p => p.name !== product.name).slice(0, 4).map((relatedProduct, idx) => (
   <Link key={idx} to="/product" state={{ name: relatedProduct.name, price: relatedProduct.price, image: relatedProduct.image, categories: relatedProduct.categories, sizes: relatedProduct.sizes }} className="flex flex-col cursor-pointer group">
     <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-2 md:p-6 relative">
-      <img alt={relatedProduct.name} className="w-full h-full object-contain" src={relatedProduct.image} />
-      <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 lg:group-hover:opacity-100 active:opacity-100 transition-opacity duration-300" type="button" onClick={(e) => { e.preventDefault(); addToCart(relatedProduct, 1, relatedProduct.sizes?.[0] || '8'); }}>
+      <img alt={relatedProduct.name} className="w-full h-full object-contain pointer-events-none select-none" src={relatedProduct.image} />
+      <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 lg:group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300" type="button" onClick={(e) => { e.preventDefault(); addToCart(relatedProduct, 1, relatedProduct.sizes?.[0] || '8'); }}>
         Add to Cart
       </button>
     </div>
