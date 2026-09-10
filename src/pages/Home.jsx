@@ -42,13 +42,12 @@ export default function Home() {
 <HeroSlideshow />
 
 
-<aside className="w-full bg-brand-ember-deep text-white py-4 px-4 relative overflow-hidden shadow-inner" data-purpose="promotional-ribbon">
-<div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+<aside className="w-full bg-brand-ember-deep text-white py-2 px-4 relative overflow-hidden shadow-inner" data-purpose="promotional-ribbon">
+<div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-2 text-center">
 
-<div className="flex items-center gap-3 flex-wrap justify-center">
-
-<p className="text-sm font-semibold tracking-wide">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Up to 30% Off Selected New Arrivals <span className="hidden sm:inline font-light text-white/70">—</span>
-<span className="text-white/90 font-normal">Complimentary Express Shipping on orders over <PriceDisplay amount={4800} /></span>
+<div className="flex flex-col items-center justify-center w-full">
+<p className="text-sm font-semibold tracking-wide text-center w-full">
+Up to 30% Off Selected New Arrivals
 </p>
 </div>
 
@@ -93,7 +92,7 @@ export default function Home() {
           <img alt={product.name} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" src={product.image} />
           <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2" type="button" onClick={(e) => { e.preventDefault(); addToCart(product, 1, product.sizes?.[0] || '8'); }}>Add to Bag</button>
         </div>
-        <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1">{product.name}</p>
+        <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1 truncate">{product.name}</p>
         <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={product.price} /></p>
       </Link>
     ))}

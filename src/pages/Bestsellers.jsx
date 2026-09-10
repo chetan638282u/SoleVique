@@ -39,7 +39,7 @@ export default function Bestsellers() {
       <img alt={product.name} className="w-full h-full object-contain" src={product.image} />
       <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" type="button" onClick={(e) => { e.preventDefault(); addToCart(product, 1, product.sizes?.[0] || '8'); }}>Add to Bag</button>
     </div>
-    <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1">{product.name}</p>
+    <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1 truncate">{product.name}</p>
     <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={product.price} /></p>
   </Link>
 ))}

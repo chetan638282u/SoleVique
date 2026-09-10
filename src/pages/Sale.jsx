@@ -60,7 +60,7 @@ export default function Sale() {
         <img alt={product.name} className="w-full h-full object-contain" src={product.image} />
         <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" type="button" onClick={(e) => { e.preventDefault(); addToCart(product, 1, product.sizes?.[0] || '8'); }}>Add to Bag</button>
       </div>
-      <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1">{product.name}</p>
+      <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1 truncate">{product.name}</p>
       <div className="flex gap-2 items-center mt-0.5 px-1">
         <p className="text-[13px] text-brand-muted line-through"><PriceDisplay amount={product.originalPrice} /></p>
         <p className="text-[13px] text-brand-ember font-bold"><PriceDisplay amount={product.price} /></p>

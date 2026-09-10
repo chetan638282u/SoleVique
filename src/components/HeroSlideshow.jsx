@@ -25,7 +25,7 @@ export default function HeroSlideshow() {
   };
 
   return (
-    <section className="relative w-full aspect-[16/6] bg-[#F9F8F6] border-b border-black/10 overflow-hidden" data-purpose="hero-showcase">
+    <section className="relative w-full aspect-[4/3] md:aspect-[16/6] bg-[#F9F8F6] border-b border-black/10 overflow-hidden" data-purpose="hero-showcase">
       {slides.map((slide, index) => (
         <div
           key={index}
