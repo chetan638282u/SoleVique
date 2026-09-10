@@ -32,7 +32,7 @@ export default function Bestsellers() {
 <div className="flex flex-col w-full items-start">
 
 <main className="w-full">
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[10px]">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-[10px]">
 {filteredProducts.map((product, idx) => (
   <Link key={idx} to="/product" state={{ name: product.name, price: product.price, image: product.image, from: '/bestsellers' }} className="flex flex-col cursor-pointer group">
     <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-6 relative">

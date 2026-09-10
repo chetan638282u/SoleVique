@@ -241,7 +241,7 @@ export default function Product() {
 </div>
 </div>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 <Link to="/product" state={{ name: "Retro Low GAT Trainer", price: 225, image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop" }} className="flex flex-col cursor-pointer group">
   <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-6 relative">
     <img alt="Retro Low GAT Trainer" className="w-full h-full object-contain" src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop" />
