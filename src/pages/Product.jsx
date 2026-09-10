@@ -1,6 +1,7 @@
 import React from 'react';
 import PriceDisplay from '../components/PriceDisplay';
 import { useCart } from '../context/CartContext';
+import ProductCard from '../components/ProductCard';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { products } from '../data/products';
 
@@ -214,16 +215,7 @@ export default function Product() {
 
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 {products.filter(p => p.name !== product.name).slice(0, 4).map((relatedProduct, idx) => (
-  <Link key={idx} to={`/product?id=${encodeURIComponent(relatedProduct.name)}`} state={{ name: relatedProduct.name, price: relatedProduct.price, image: relatedProduct.image, categories: relatedProduct.categories, sizes: relatedProduct.sizes }} className="flex flex-col cursor-pointer group">
-    <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-2 md:p-6 relative">
-      <img alt={relatedProduct.name} className="w-full h-full object-contain pointer-events-none select-none" src={relatedProduct.image} />
-      <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 shadow-lg opacity-0 lg:group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 delay-[2000ms] lg:group-hover:delay-0 group-active:delay-0 focus:opacity-100 focus:delay-0" type="button" onClick={(e) => { e.preventDefault(); addToCart(relatedProduct, 1, relatedProduct.sizes?.[0] || '8'); }}>
-        Add to Cart
-      </button>
-    </div>
-    <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1 truncate">{relatedProduct.name}</p>
-    <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={relatedProduct.price} /></p>
-  </Link>
+  <ProductCard key={idx} product={relatedProduct} className="" />
 ))}
 </div>
 </section>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ProductCard from '../components/ProductCard';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import TopBarFilter from '../components/TopBarFilter';
@@ -34,14 +35,7 @@ export default function Bestsellers() {
 <main className="w-full">
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-[10px]">
 {filteredProducts.map((product, idx) => (
-  <Link key={idx} to={`/product?id=${encodeURIComponent(product.name)}`} state={{ name: product.name, price: product.price, image: product.image, from: '/bestsellers' }} className="flex flex-col cursor-pointer group">
-    <div className="w-full aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-2 md:p-6 relative">
-      <img alt={product.name} className="w-full h-full object-contain pointer-events-none select-none" src={product.image} />
-      <button className="absolute bottom-3 left-3 right-3 bg-brand-black text-white py-2.5 rounded-xl font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 opacity-0 lg:group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 delay-[2000ms] lg:group-hover:delay-0 group-active:delay-0 focus:opacity-100 focus:delay-0" type="button" onClick={(e) => { e.preventDefault(); addToCart(product, 1, product.sizes?.[0] || '8'); }}>Add to Bag</button>
-    </div>
-    <p className="text-sm text-brand-charcoal font-normal leading-snug mt-3 px-1 truncate">{product.name}</p>
-    <p className="text-[13px] text-black font-medium mt-0.5 px-1"><PriceDisplay amount={product.price} /></p>
-  </Link>
+  <ProductCard key={idx} product={product} className="" />
 ))}
 </div>
 
