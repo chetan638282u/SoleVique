@@ -146,10 +146,10 @@ export default function Cart() {
                   <span className="font-bold text-brand-black text-lg lg:text-xl leading-none"><PriceDisplay amount={subtotal} /></span>
                 </div>
 
-                <button className="w-full bg-[#1A1A1A] lg:bg-brand-black text-white font-bold text-[13px] uppercase tracking-wider py-3.5 lg:py-4 hover:bg-black lg:hover:bg-neutral-800 transition-colors" type="button">
+                <Link to="/checkout" className="w-full flex items-center justify-center bg-[#1A1A1A] lg:bg-brand-black text-white font-bold text-[13px] uppercase tracking-wider py-3.5 lg:py-4 hover:bg-black lg:hover:bg-neutral-800 transition-colors">
                   <span className="lg:hidden">CHECKOUT</span>
                   <span className="hidden lg:inline">PROCEED TO SECURE CHECKOUT</span>
-                </button>
+                </Link>
 
                 <p className="mt-3 text-[9px] text-neutral-500 px-1 leading-relaxed lg:hidden">
                   By continuing, I confirm that I have read and accept the <a href="#" className="underline hover:text-brand-black">Terms and Conditions</a> and the <a href="#" className="underline hover:text-brand-black">Privacy Policy</a>.
