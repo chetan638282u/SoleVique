@@ -39,7 +39,7 @@ export default function Product() {
 
 <div className="flex md:flex-col gap-space-xs shrink-0 overflow-x-auto md:overflow-visible pb-1 md:pb-0" id="thumbnail-strip">
 <button className="thumb-btn relative w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden bg-surface-container-lowest p-1 shadow-sm transition-all duration-200 border-2 border-brand-black"  type="button">
-<img alt={product.name} className="w-full h-full object-contain mix-blend-multiply pointer-events-none select-none" src={product.image} />
+<img alt={product.name} className="w-full h-full object-contain pointer-events-none select-none" src={product.image} />
 <span className="sr-only">View Lateral Profile</span>
 </button>
 </div>
@@ -57,7 +57,7 @@ export default function Product() {
 >
 <img 
   alt={product.name} 
-  className="w-full h-full object-contain mix-blend-multiply pointer-events-none select-none" 
+  className="w-full h-full object-contain pointer-events-none select-none" 
   id="main-product-img" 
   src={product.image}  
 />

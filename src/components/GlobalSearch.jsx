@@ -148,7 +148,7 @@ export default function GlobalSearch() {
                           className="flex items-center gap-4 w-full text-left group"
                         >
                           <div className="w-12 h-12 bg-[#F4F4F4] flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-[#EAEAEA] transition-colors">
-                            <img src={product.image} alt={product.name} className="w-10 h-10 object-contain mix-blend-multiply group-hover:scale-110 transition-transform" />
+                            <img src={product.image} alt={product.name} className="w-10 h-10 object-contain group-hover:scale-110 transition-transform" />
                           </div>
                           <div>
                             <p className="text-sm font-semibold text-brand-black group-hover:text-brand-ember transition-colors line-clamp-1">{product.name}</p>
