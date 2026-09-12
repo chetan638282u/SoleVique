@@ -16,6 +16,7 @@ import Product from './pages/Product'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Search from './pages/Search'
+import AllProducts from './pages/AllProducts'
 import { CurrencyProvider } from './context/CurrencyContext'
 import { CartProvider } from './context/CartContext'
 import ScrollToTop from './components/ScrollToTop'
@@ -42,6 +43,7 @@ function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="search" element={<Search />} />
+          <Route path="all-products" element={<AllProducts />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
         </Routes>

@@ -100,7 +100,7 @@ Up to 30% Off Selected New Arrivals
 </div>
 
 <div className="mt-12 flex justify-center">
-  <Link className="px-8 py-3 bg-brand-black text-white font-bold uppercase tracking-wider text-sm rounded-xl hover:bg-brand-ember transition-colors" to="/bestsellers">
+  <Link className="px-8 py-3 bg-brand-black text-white font-bold uppercase tracking-wider text-sm rounded-xl hover:bg-brand-ember transition-colors" to="/all-products">
     View All Products
   </Link>
 </div>

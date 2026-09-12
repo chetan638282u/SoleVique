@@ -68,7 +68,7 @@ export default function Search() {
             {matchedCategories.length > 0 && (
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-4">
-                  {query === '' ? 'All Categories' : 'Matching Categories'}
+                  {query === '' ? 'Categories' : 'Suggestions'}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {matchedCategories.map(cat => (
@@ -86,25 +86,34 @@ export default function Search() {
 
             {(query !== '' || filteredProducts.length > 0) && (
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-4">Products ({filteredProducts.length})</h4>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-4">Products</h4>
                 {filteredProducts.length > 0 ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {filteredProducts.map((product, idx) => (
-                      <button 
-                        key={idx}
-                        onClick={() => handleProductClick(product)}
-                        className="flex items-center gap-4 text-left group bg-white border border-neutral-100 p-2 rounded-xl hover:shadow-md transition-shadow"
-                      >
-                        <div className="w-20 h-20 bg-[#F4F4F4] flex items-center justify-center rounded-lg overflow-hidden shrink-0 group-hover:bg-[#EAEAEA] transition-colors">
-                          <img src={product.image} alt={product.name} className="w-16 h-16 object-contain group-hover:scale-110 transition-transform" />
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-brand-black line-clamp-2 group-hover:text-brand-ember transition-colors">{product.name}</p>
-                          <p className="text-sm font-bold text-brand-charcoal mt-1"><PriceDisplay amount={product.price} /></p>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {filteredProducts.slice(0, 10).map((product, idx) => (
+                        <button 
+                          key={idx}
+                          onClick={() => handleProductClick(product)}
+                          className="flex items-center gap-4 text-left group bg-white border border-neutral-100 p-2 rounded-xl hover:shadow-md transition-shadow"
+                        >
+                          <div className="w-20 h-20 bg-[#F4F4F4] flex items-center justify-center rounded-lg overflow-hidden shrink-0 group-hover:bg-[#EAEAEA] transition-colors">
+                            <img src={product.image} alt={product.name} className="w-16 h-16 object-contain group-hover:scale-110 transition-transform" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold text-brand-black line-clamp-2 group-hover:text-brand-ember transition-colors">{product.name}</p>
+                            <p className="text-sm font-bold text-brand-charcoal mt-1"><PriceDisplay amount={product.price} /></p>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                    {filteredProducts.length > 10 && (
+                      <div className="mt-6 pt-4 border-t border-brand-border text-center">
+                        <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">
+                          + {filteredProducts.length - 10} more results available
+                        </span>
+                      </div>
+                    )}
+                  </>
                 ) : (
                   <p className="text-sm text-neutral-500">No products found.</p>
                 )}
