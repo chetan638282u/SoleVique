@@ -24,6 +24,26 @@ export default function Product() {
     }
   }, [product, navigate]);
 
+  const relatedProducts = React.useMemo(() => {
+    if (!product || !product.categories) return products.slice(0, 4);
+    
+    return products
+      .filter(p => p.name !== product.name)
+      .map(p => {
+        let score = 0;
+        p.categories?.forEach(c => {
+          if (product.categories.includes(c)) score += 1;
+        });
+        return { item: p, score };
+      })
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return ((a.item.name.charCodeAt(0) * 13 + a.item.price) % 97) - ((b.item.name.charCodeAt(0) * 13 + b.item.price) % 97);
+      })
+      .map(x => x.item)
+      .slice(0, 4);
+  }, [product]);
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
@@ -199,25 +219,22 @@ export default function Product() {
 </div>
 </section>
 
-<section className="max-w-[1360px] w-full mx-auto px-margin-desktop py-space-xl">
-<div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<section className="max-w-[1360px] w-full mx-auto px-[15px] pb-16 pt-2 lg:pt-4">
+<div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
 <div>
-<h2 className="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
-          You May Also Like
+<h2 className="font-architectural text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight">
+          You May Like
         </h2>
-<p className="font-body-md text-body-md text-on-surface-variant mt-1">
-          Handcrafted silhouettes engineered with matching zero-drop ergonomics and artisanal leathers.
-        </p>
 </div>
-<div className="flex items-center gap-space-xs mt-space-md md:mt-0">
-<Link className="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider flex items-center gap-1 hover:text-secondary transition-colors" data-path="collections" to="#">
+<div className="flex items-center mt-4 md:mt-0">
+<Link className="text-sm font-bold uppercase tracking-wider text-brand-charcoal flex items-center gap-1 hover:text-brand-ember transition-colors" data-path="collections" to="/all-products">
           Explore Entire Archive <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </Link>
 </div>
 </div>
 
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-{products.filter(p => p.name !== product.name).slice(0, 4).map((relatedProduct, idx) => (
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-[10px]">
+{relatedProducts.map((relatedProduct, idx) => (
   <ProductCard key={idx} product={relatedProduct} className="" />
 ))}
 </div>
