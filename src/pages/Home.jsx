@@ -34,7 +34,7 @@ export default function Home() {
       current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
-  const trendingProducts = products.slice(0, 7);
+  const trendingProducts = React.useMemo(() => [...products].sort(() => 0.5 - Math.random()).slice(0, 8), []);
 
   return (
     <>
@@ -133,12 +133,12 @@ Up to 30% Off Selected New Arrivals
 <div className="relative z-10 p-6 flex flex-col justify-between h-full">
 <div></div>
 <div className="pt-12">
-<h3 className="font-architectural text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">ALL PRODUCTS</h3>
+<h3 className="font-architectural text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">BESTSELLERS</h3>
 <p className="text-xs text-neutral-300 font-medium">Timeless forms refined season after season.</p>
 </div>
 </div>
 </Link>
-<Link to="/running" className="group relative rounded-2xl overflow-hidden border border-black/10 bg-brand-charcoal min-h-[270px] lg:min-h-[280px] flex-1 flex flex-col justify-between block">
+<Link to="/men" className="group relative rounded-2xl overflow-hidden border border-black/10 bg-brand-charcoal min-h-[270px] lg:min-h-[280px] flex-1 flex flex-col justify-between block">
 <div className="absolute inset-0 z-0 overflow-hidden">
 <img alt="Men's Footwear Campaign" className="w-full h-full object-cover" src="/images/men_campaign.png" />
 <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent"></div>

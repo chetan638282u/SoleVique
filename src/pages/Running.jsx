@@ -11,8 +11,8 @@ export default function Running() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   
-  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Running")), []);
-  const [filteredProducts, setFilteredProducts] = useState(initialProducts);
+  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Running")).sort(() => 0.5 - Math.random()), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
 
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);

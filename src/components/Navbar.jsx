@@ -15,6 +15,10 @@ export default function Navbar() {
   const [showPortfolioNotice, setShowPortfolioNotice] = useState(false);
   const location = useLocation();
 
+  // Smart Sticky Navbar State
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -29,9 +33,29 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen, isAuthModalOpen]);
 
+  // Scroll detection for smart sticky navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling down & past navbar height -> hide
+        setIsVisible(false);
+      } else {
+        // Scrolling up -> show
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-white border-b border-brand-border transition-all" data-purpose="main-navigation" >
+      <header className={`sticky top-0 z-50 w-full bg-white border-b border-brand-border transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full lg:translate-y-0'}`} data-purpose="main-navigation" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
           {/* Mobile Left: Hamburger & Search */}

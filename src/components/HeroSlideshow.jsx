@@ -4,9 +4,9 @@ export default function HeroSlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides = [
+    '/images/hero_slideshow/hero_slide_3.png',
     '/images/hero_slideshow/hero_slide_1.png',
-    '/images/hero_slideshow/hero_slide_2.png',
-    '/images/hero_slideshow/hero_slide_3.png'
+    '/images/hero_slideshow/hero_slide_2.png'
   ];
 
   useEffect(() => {

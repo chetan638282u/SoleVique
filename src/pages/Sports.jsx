@@ -11,8 +11,8 @@ export default function Sports() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   
-  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Sports")), []);
-  const [filteredProducts, setFilteredProducts] = useState(initialProducts);
+  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Sports")).sort(() => 0.5 - Math.random()), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
 
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);

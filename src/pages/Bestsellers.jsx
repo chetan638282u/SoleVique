@@ -8,8 +8,8 @@ import PriceDisplay from '../components/PriceDisplay';
 
 export default function Bestsellers() {
   const { addToCart } = useCart();
-  const initialProducts = globalProducts;
-  const [filteredProducts, setFilteredProducts] = useState(initialProducts);
+  const initialProducts = React.useMemo(() => [...(globalProducts.slice(0, 8))].sort(() => 0.5 - Math.random()), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
 
 
   return (
@@ -20,7 +20,7 @@ export default function Bestsellers() {
 <section className="w-full bg-white pt-2 pb-4">
 <div className="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop">
 <h1 className="font-architectural text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight uppercase">
-            All Products
+            Bestsellers
           </h1>
 </div>
 </section>
