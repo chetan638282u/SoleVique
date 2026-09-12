@@ -11,8 +11,8 @@ export default function Formal() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   
-  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Formal")).sort(() => 0.5 - Math.random()), []);
-  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
+  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Formal")).sort((a, b) => ((a.name.charCodeAt(0) * 18 + a.price) % 97) - ((b.name.charCodeAt(0) * 18 + b.price) % 97)), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort((a, b) => ((a.name.charCodeAt(0) * 18 + a.price) % 97) - ((b.name.charCodeAt(0) * 18 + b.price) % 97)));
 
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);

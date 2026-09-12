@@ -11,8 +11,8 @@ export default function Running() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   
-  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Running")).sort(() => 0.5 - Math.random()), []);
-  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
+  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Running")).sort((a, b) => ((a.name.charCodeAt(0) * 38 + a.price) % 97) - ((b.name.charCodeAt(0) * 38 + b.price) % 97)), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort((a, b) => ((a.name.charCodeAt(0) * 38 + a.price) % 97) - ((b.name.charCodeAt(0) * 38 + b.price) % 97)));
 
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);

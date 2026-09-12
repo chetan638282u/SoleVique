@@ -34,7 +34,7 @@ export default function Home() {
       current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
-  const trendingProducts = React.useMemo(() => [...products].sort(() => 0.5 - Math.random()).slice(0, 8), []);
+  const trendingProducts = React.useMemo(() => [...products].sort((a, b) => ((a.name.charCodeAt(0) * 23 + a.price) % 97) - ((b.name.charCodeAt(0) * 23 + b.price) % 97)).slice(0, 8), []);
 
   return (
     <>

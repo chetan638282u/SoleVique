@@ -20,7 +20,7 @@ export default function Sale() {
         };
         return { ...p, originalPrice: p.price, price: discounts[p.name] || p.price };
     }), []);
-  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort((a, b) => ((a.name.charCodeAt(0) * 43 + a.price) % 97) - ((b.name.charCodeAt(0) * 43 + b.price) % 97)));
 
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);

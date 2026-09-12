@@ -11,8 +11,8 @@ export default function NewArrivals() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   
-  const initialProducts = useMemo(() => globalProducts.filter(p => ["Tuscan Penny Loafer", "Architectural Cross Slide", "Arch-Court Sneaker 01", "Verona Brass Buckle Clog Mule"].includes(p.name)).sort(() => 0.5 - Math.random()), []);
-  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
+  const initialProducts = useMemo(() => globalProducts.filter(p => ["Tuscan Penny Loafer", "Architectural Cross Slide", "Arch-Court Sneaker 01", "Verona Brass Buckle Clog Mule"].includes(p.name)).sort((a, b) => ((a.name.charCodeAt(0) * 33 + a.price) % 97) - ((b.name.charCodeAt(0) * 33 + b.price) % 97)), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort((a, b) => ((a.name.charCodeAt(0) * 33 + a.price) % 97) - ((b.name.charCodeAt(0) * 33 + b.price) % 97)));
 
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);

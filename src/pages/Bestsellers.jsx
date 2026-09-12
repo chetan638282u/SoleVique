@@ -8,8 +8,8 @@ import PriceDisplay from '../components/PriceDisplay';
 
 export default function Bestsellers() {
   const { addToCart } = useCart();
-  const initialProducts = React.useMemo(() => [...(globalProducts.slice(0, 8))].sort(() => 0.5 - Math.random()), []);
-  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
+  const initialProducts = React.useMemo(() => [...(globalProducts.slice(0, 8))].sort((a, b) => ((a.name.charCodeAt(0) * 8 + a.price) % 97) - ((b.name.charCodeAt(0) * 8 + b.price) % 97)), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort((a, b) => ((a.name.charCodeAt(0) * 8 + a.price) % 97) - ((b.name.charCodeAt(0) * 8 + b.price) % 97)));
 
 
   return (

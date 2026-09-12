@@ -11,8 +11,8 @@ export default function Casual() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
   
-  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Casual")).sort(() => 0.5 - Math.random()), []);
-  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort(() => 0.5 - Math.random()));
+  const initialProducts = useMemo(() => globalProducts.filter(p => p.categories?.includes("Casual")).sort((a, b) => ((a.name.charCodeAt(0) * 13 + a.price) % 97) - ((b.name.charCodeAt(0) * 13 + b.price) % 97)), []);
+  const [filteredProducts, setFilteredProducts] = useState(() => [...initialProducts].sort((a, b) => ((a.name.charCodeAt(0) * 13 + a.price) % 97) - ((b.name.charCodeAt(0) * 13 + b.price) % 97)));
 
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
