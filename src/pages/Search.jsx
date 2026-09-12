@@ -43,7 +43,7 @@ export default function Search() {
 
   return (
     <div className="flex flex-col bg-white min-h-[calc(100vh-80px)] w-full max-w-[1360px] mx-auto">
-      <div className="p-4 md:p-8 border-b border-neutral-200 sticky top-20 bg-white z-10 flex gap-2 shadow-sm">
+      <div className="px-4 pb-4 pt-1 md:p-8 border-b border-neutral-200 relative md:sticky md:top-20 bg-white z-10 flex gap-2 shadow-sm">
         <input
           ref={inputRef}
           type="text"

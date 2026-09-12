@@ -6,8 +6,8 @@ export default function Breadcrumbs() {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter(x => x);
 
-  // If on home page, don't show breadcrumbs
-  if (pathnames.length === 0) return null;
+  // If on home page or search page, don't show breadcrumbs
+  if (pathnames.length === 0 || pathnames[0] === 'search') return null;
 
   const routeNameMap = {
     'men': "Men",
