@@ -349,7 +349,7 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
         className={`fixed inset-0 bg-white z-[100] transform transition-transform duration-300 ease-in-out flex flex-col md:hidden ${isMobileFilterOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-neutral-200">
+        <div className="shrink-0 flex items-center justify-between p-4 border-b border-neutral-200">
           <h2 className="font-architectural text-xl tracking-wide uppercase font-bold text-brand-black">Filters & Sort</h2>
           <button onClick={() => setIsMobileFilterOpen(false)} className="p-2 bg-neutral-100 hover:bg-neutral-200 rounded-full flex items-center justify-center transition-colors">
             <span className="material-symbols-outlined text-[20px]">close</span>
@@ -357,7 +357,7 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
         </div>
 
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-8 pb-32">
+        <div className="flex-1 overflow-y-auto p-6 space-y-8 overscroll-contain">
           
 
 
@@ -444,7 +444,7 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
         </div>
 
         {/* Footer actions */}
-        <div className="absolute bottom-0 left-0 w-full p-6 bg-white border-t border-neutral-200 flex gap-4">
+        <div className="shrink-0 w-full p-6 bg-white border-t border-neutral-200 flex gap-4">
           <button 
             onClick={() => { setSelectedCategories([]); setSelectedSizes([]); setMinPrice(0); setMaxPrice(maxPossiblePrice); setSortMethod("Recommended"); }}
             className="flex-1 py-4 border border-brand-black text-brand-black font-bold uppercase tracking-widest rounded-lg hover:bg-neutral-50 transition-colors"
