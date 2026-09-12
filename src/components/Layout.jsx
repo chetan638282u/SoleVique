@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-black font-sans">
+    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-black font-sans w-full max-w-[100vw] overflow-x-hidden">
       <AnnouncementBar />
       <Navbar />
       <Breadcrumbs />
