@@ -133,9 +133,10 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
         <style dangerouslySetInnerHTML={{__html: `
           input[type=range]::-webkit-slider-thumb {
             pointer-events: all;
-            width: 16px;
-            height: 16px;
+            width: 24px;
+            height: 24px;
             -webkit-appearance: none;
+            cursor: pointer;
           }
         `}} />
         <div className="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-wrap items-center justify-between gap-4 w-full">
@@ -417,11 +418,11 @@ export default function TopBarFilter({ allProducts, onFilterChange }) {
                 ></div>
                 <input
                   type="range" min="0" max={maxPossiblePrice} value={minPrice} onChange={handleMinChange}
-                  className="absolute w-full h-2 opacity-0 cursor-pointer z-10"
+                  className="absolute w-full h-2 opacity-0 cursor-pointer z-10 pointer-events-none appearance-none"
                 />
                 <input
                   type="range" min="0" max={maxPossiblePrice} value={maxPrice} onChange={handleMaxChange}
-                  className="absolute w-full h-2 opacity-0 cursor-pointer z-20"
+                  className="absolute w-full h-2 opacity-0 cursor-pointer z-20 pointer-events-none appearance-none"
                 />
                 <div 
                   className="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-white border-2 border-brand-charcoal rounded-full pointer-events-none shadow-md"
