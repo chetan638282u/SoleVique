@@ -7,11 +7,11 @@ import Footer from './Footer';
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-black font-sans w-full max-w-[100vw] overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-black font-sans overflow-x-hidden w-full">
       <AnnouncementBar />
       <Navbar />
       <Breadcrumbs />
-      <main className="flex-grow">
+      <main className="flex-grow overflow-hidden max-w-full">
         <Outlet />
       </main>
       <Footer />

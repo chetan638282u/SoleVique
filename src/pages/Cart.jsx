@@ -13,8 +13,8 @@ export default function Cart() {
 
   return (
     <>
-      <div className="flex flex-col w-full bg-white min-h-screen pb-20">
-        <div className="max-w-[1360px] mx-auto w-full px-0 lg:px-[15px] py-8 lg:py-12">
+      <div className="flex flex-col bg-white min-h-screen pb-20 w-full max-w-full">
+        <div className="max-w-[1360px] mx-auto w-full px-4 lg:px-[15px] py-8 lg:py-12">
           
           <h1 className="font-bold lg:font-black lg:font-architectural text-xl sm:text-2xl lg:text-4xl uppercase tracking-tight lg:tracking-tight mb-4 lg:mb-8 text-brand-black px-4 lg:px-0">
             {/* Mobile Header */}

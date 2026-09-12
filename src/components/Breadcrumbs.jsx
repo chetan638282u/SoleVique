@@ -47,7 +47,7 @@ export default function Breadcrumbs() {
   return (
     <div className="w-full bg-white pt-4 pb-0">
       <div className="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin-desktop">
-        <nav className="flex text-[11px] sm:text-xs tracking-widest uppercase text-neutral-400 font-semibold space-x-2">
+        <nav className="flex flex-wrap text-[11px] sm:text-xs tracking-widest uppercase text-neutral-400 font-semibold space-x-2">
           {trails.map((trail, index) => {
             const isLast = index === trails.length - 1;
             return (
