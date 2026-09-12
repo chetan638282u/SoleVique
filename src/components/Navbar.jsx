@@ -68,7 +68,16 @@ export default function Navbar() {
             >
               <span className="material-symbols-outlined text-[28px]">menu</span>
             </button>
-            <GlobalSearch />
+            <Link 
+              to="/search"
+              aria-label="Search Catalog" 
+              className="p-2 rounded-xl text-brand-charcoal hover:bg-black/5 hover:text-brand-black transition duration-200 flex items-center justify-center shrink-0"
+            >
+              <svg className="w-5 h-5" fill="none" height="20" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" viewBox="0 0 24 24" width="20">
+                <circle cx="11" cy="11" r="7.5"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+              </svg>
+            </Link>
           </div>
 
           {/* Desktop Left: Logo */}

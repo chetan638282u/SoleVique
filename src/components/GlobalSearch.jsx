@@ -39,26 +39,15 @@ export default function GlobalSearch() {
     return matchName || matchCategory;
   });
 
-  // Extract unique matched categories from the filtered products, OR directly match query with categories
-  // If the query matches a category name directly, we prioritize those.
-  let matchedCategories = [];
-  if (query !== '') {
-    const allMatchingCats = new Set();
-    
-    // First check if query matches any category explicitly across all products
-    products.forEach(p => {
-      p.categories.forEach(c => {
-        if (c.toLowerCase().includes(query)) {
-          allMatchingCats.add(c);
-        }
-      });
-    });
+  // Extract all unique categories
+  let allCategories = new Set();
+  products.forEach(p => p.categories.forEach(c => allCategories.add(c)));
+  allCategories = Array.from(allCategories).sort();
 
-    // We only want categories that explicitly match the query, 
-    // so we don't add all categories from filtered products.
-
-    matchedCategories = Array.from(allMatchingCats).sort().slice(0, 5); // limit to 5
-  }
+  // Filter categories based on query, or show all if query is empty
+  const matchedCategories = query === '' 
+    ? allCategories 
+    : allCategories.filter(c => c.toLowerCase().includes(query));
 
   const handleProductClick = (product) => {
     setIsOpen(false);
@@ -110,14 +99,16 @@ export default function GlobalSearch() {
       </div>
 
       {/* Dropdown Menu */}
-      {isOpen && searchQuery && (
+      {isOpen && (
         <div className="absolute top-full right-0 mt-3 w-[320px] sm:w-[500px] bg-white border border-brand-border rounded-2xl shadow-xl overflow-hidden z-50 animate-fade-in">
           {filteredProducts.length > 0 || matchedCategories.length > 0 ? (
             <div className="flex flex-col sm:flex-row min-h-[300px]">
               
               {/* Left Side: Categories */}
               <div className="w-full sm:w-1/3 bg-neutral-50/80 p-4 sm:p-5 border-b sm:border-b-0 sm:border-r border-brand-border">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">Categories</h4>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">
+                  {query === '' ? 'Categories' : 'Suggestions'}
+                </h4>
                 {matchedCategories.length > 0 ? (
                   <ul className="space-y-2">
                     {matchedCategories.map(cat => (
@@ -138,35 +129,44 @@ export default function GlobalSearch() {
 
               {/* Right Side: Products */}
               <div className="w-full sm:w-2/3 p-4 sm:p-5 max-h-[400px] overflow-y-auto scrollbar-thin">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">Products</h4>
-                {filteredProducts.length > 0 ? (
-                  <ul className="space-y-4">
-                    {filteredProducts.slice(0, 6).map((product, idx) => (
-                      <li key={idx}>
-                        <button 
-                          onClick={() => handleProductClick(product)}
-                          className="flex items-center gap-4 w-full text-left group"
-                        >
-                          <div className="w-12 h-12 bg-[#F4F4F4] flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-[#EAEAEA] transition-colors">
-                            <img src={product.image} alt={product.name} className="w-10 h-10 object-contain group-hover:scale-110 transition-transform" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-brand-black group-hover:text-brand-ember transition-colors line-clamp-1">{product.name}</p>
-                            <p className="text-xs font-medium text-brand-charcoal mt-0.5"><PriceDisplay amount={product.price} /></p>
-                          </div>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-sm text-brand-charcoal">No products found for "{searchQuery}"</p>
-                )}
-                {filteredProducts.length > 6 && (
-                  <div className="mt-4 pt-4 border-t border-brand-border text-center">
-                    <span className="text-xs font-bold uppercase tracking-wider text-brand-charcoal">
-                      +{filteredProducts.length - 6} more results
-                    </span>
+                {query === '' ? (
+                  <div className="text-center py-10 text-neutral-400 flex flex-col items-center justify-center h-full">
+                    <span className="material-symbols-outlined text-[48px] mb-4 opacity-50">search</span>
+                    <p className="text-sm font-medium">Start typing to search our catalog</p>
                   </div>
+                ) : (
+                  <>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">Products</h4>
+                    {filteredProducts.length > 0 ? (
+                      <ul className="space-y-4">
+                        {filteredProducts.slice(0, 10).map((product, idx) => (
+                          <li key={idx}>
+                            <button 
+                              onClick={() => handleProductClick(product)}
+                              className="flex items-center gap-4 w-full text-left group"
+                            >
+                              <div className="w-12 h-12 bg-[#F4F4F4] flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-[#EAEAEA] transition-colors">
+                                <img src={product.image} alt={product.name} className="w-10 h-10 object-contain group-hover:scale-110 transition-transform" />
+                              </div>
+                              <div>
+                                <p className="text-sm font-semibold text-brand-black group-hover:text-brand-ember transition-colors line-clamp-1">{product.name}</p>
+                                <p className="text-xs font-medium text-brand-charcoal mt-0.5"><PriceDisplay amount={product.price} /></p>
+                              </div>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-sm text-brand-charcoal">No products found for "{searchQuery}"</p>
+                    )}
+                    {filteredProducts.length > 10 && (
+                      <div className="mt-4 pt-4 border-t border-brand-border text-center">
+                        <button onClick={() => { setIsOpen(false); navigate('/search'); }} className="text-xs font-bold uppercase tracking-wider text-brand-charcoal hover:text-brand-ember transition-colors">
+                          + {filteredProducts.length - 10} more results
+                        </button>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
 
