@@ -19,7 +19,7 @@ export const products = [
   { name: "Minimalist Calfskin Sneaker", price: 5600, image: "/images/women/Minimalist Calfskin Sneaker.png", categories: ["Women", "Casual"], sizes: [6, 7, 9, 10] },
   { name: "Verona Brass Buckle Clog Mule", price: 5200, image: "/images/women/Verona Brass Buckle Clog Mule.png", categories: ["Women", "Sandals"], sizes: [6, 7, 8, 9, 10] },
   { name: "Minimalist Suede Driving Loafer", price: 4800, image: "/images/women/Minimalist Suede Driving Loafer.png", categories: ["Women", "Formal"], sizes: [6, 7, 10] },
-  { name: "Court Minimaliste", price: 4500, image: "/images/women/Court Minimaliste.png", categories: ["Women", "Casual"], sizes: [6, 7, 8, 9, 10] },
+  { name: "Aero Mesh Sports Runner", price: 4500, image: "/images/women/Aero Mesh Sports Runner.png", categories: ["Women", "Running", "Sports"], sizes: [6, 7, 8, 9, 10] },
   { name: "Pointed Slingback Kitten Heel", price: 4200, image: "/images/women/Pointed Slingback Kitten Heel.png", categories: ["Women", "Formal"], sizes: [6, 7, 8, 10] },
   { name: "Architectural Cross Slide", price: 3500, image: "/images/women/Architectural Cross Slide.png", categories: ["Women", "Sandals"], sizes: [6, 7, 8, 9] },
   { name: "Sculpted Block-Heel Sandal", price: 2500, image: "/images/women/Sculpted Block-Heel Sandal.png", categories: ["Women", "Sandals"], sizes: [8, 9, 10] }
