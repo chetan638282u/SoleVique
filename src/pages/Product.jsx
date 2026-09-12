@@ -7,27 +7,32 @@ import { products } from '../data/products';
 
 export default function Product() {
   const location = useLocation();
-  const product = location.state || {
-    name: 'Arch-Series 01 Court Minimaliste',
-    price: 215,
-    image: 'https://images.unsplash.com/photo-1605348532760-6753d2c43329?q=80&w=800&auto=format&fit=crop'
-  };
-
+  const navigate = useNavigate();
+  const product = location.state;
+  
   const [selectedSize, setSelectedSize] = React.useState('8');
   const [quantity, setQuantity] = React.useState(1);
   const [isSizeGuideOpen, setIsSizeGuideOpen] = React.useState(false);
   const [isDescOpen, setIsDescOpen] = React.useState(false);
 
-    const navigate = useNavigate();
   const { addToCart } = useCart();
+
+  // If navigated directly without a product, redirect to home
+  React.useEffect(() => {
+    if (!product) {
+      navigate('/', { replace: true });
+    }
+  }, [product, navigate]);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  if (!product) return null;
+
   return (
     <>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full bg-white min-h-screen">
 
 <section className="max-w-[1360px] w-full mx-auto px-margin-desktop py-space-xl">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
