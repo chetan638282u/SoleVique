@@ -39,7 +39,7 @@ export default function Cart() {
                     {/* Image Column */}
                     <div className="w-[120px] lg:w-48 flex flex-col gap-2 lg:items-center shrink-0">
                       <div className="w-full aspect-[4/3] lg:aspect-square bg-[#F4F4F4] p-0 lg:p-4 flex items-center justify-center">
-                        <img alt={item.name} className="w-[90%] lg:w-full h-[90%] lg:h-full object-contain pointer-events-none select-none mix-blend-multiply drop-shadow-[0_20px_25px_rgba(0,0,0,0.12)] lg:drop-shadow-none" src={item.image} />
+                        <img alt={item.name} className="w-[90%] lg:w-full h-[90%] lg:h-full object-contain pointer-events-none select-none mix-blend-multiply" src={item.image} />
                       </div>
                       <div className="flex items-center gap-1 border border-[#586337] text-[#586337] px-1.5 lg:px-2 py-0.5 rounded-full text-[9px] lg:text-[10px] font-bold uppercase self-start lg:self-center mt-0 lg:mt-3">
                         <span className="material-symbols-outlined text-[11px] lg:text-[14px]">check_circle</span>

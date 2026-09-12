@@ -53,7 +53,7 @@ export default function ProductCard({ product, className = '' }) {
       <div className="w-full aspect-[4/5] md:aspect-square bg-[#F4F4F4] overflow-hidden flex items-center justify-center p-2 md:p-6 relative">
         <img 
           alt={product.name} 
-          className="w-full h-full object-contain pointer-events-none select-none mix-blend-multiply drop-shadow-[0_20px_25px_rgba(0,0,0,0.12)]" 
+          className="w-full h-full object-contain pointer-events-none select-none mix-blend-multiply" 
           src={product.image} 
         />
         <button 

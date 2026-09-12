@@ -57,7 +57,7 @@ export default function Product() {
 >
 <img 
   alt={product.name} 
-  className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_25px_rgba(0,0,0,0.12)] pointer-events-none select-none" 
+  className="w-full h-full object-contain mix-blend-multiply pointer-events-none select-none" 
   id="main-product-img" 
   src={product.image}  
 />
