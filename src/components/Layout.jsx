@@ -4,6 +4,7 @@ import AnnouncementBar from './AnnouncementBar';
 import Navbar from './Navbar';
 import Breadcrumbs from './Breadcrumbs';
 import Footer from './Footer';
+import Toast from './Toast';
 
 export default function Layout() {
   return (
@@ -15,6 +16,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <Toast />
     </div>
   );
 }

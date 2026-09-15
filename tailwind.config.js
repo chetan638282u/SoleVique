@@ -237,7 +237,8 @@ module.exports = {
 },
       animation: {
       "float-subtle": "float 6s ease-in-out infinite",
-      "pulse-soft": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+      "pulse-soft": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      "fade-in-up": "fade-in-up 0.3s ease-out forwards"
 },
       keyframes: {
       "float": {
@@ -246,6 +247,16 @@ module.exports = {
             },
             "50%": {
                   "transform": "translateY(-10px) rotate(0.5deg)"
+            }
+      },
+      "fade-in-up": {
+            "0%": {
+                  "opacity": "0",
+                  "transform": "translate(-50%, 10px)"
+            },
+            "100%": {
+                  "opacity": "1",
+                  "transform": "translate(-50%, 0)"
             }
       }
 }

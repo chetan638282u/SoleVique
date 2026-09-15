@@ -9,6 +9,8 @@ export const CartProvider = ({ children }) => {
     const saved = localStorage.getItem('cartItems');
     return saved ? JSON.parse(saved) : [];
   });
+  
+  const [toast, setToast] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -26,6 +28,12 @@ export const CartProvider = ({ children }) => {
       }
       return [...prev, { ...product, quantity, size }];
     });
+    
+    // Show toast
+    setToast({ message: `${product.name} added to cart`, id: Date.now() });
+    setTimeout(() => {
+      setToast(null);
+    }, 3000);
   };
 
   const removeFromCart = (name, size) => {
@@ -42,7 +50,7 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, toast }}>
       {children}
     </CartContext.Provider>
   );
