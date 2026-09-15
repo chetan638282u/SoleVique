@@ -1,6 +1,5 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
-import { CheckCircleIcon } from '@heroicons/react/24/solid'; // assuming they have heroicons, if not I'll just use an SVG or basic styling
 
 export default function Toast() {
   const { toast } = useCart();
