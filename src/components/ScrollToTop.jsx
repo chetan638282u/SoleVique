@@ -5,10 +5,13 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Use setTimeout to ensure the DOM has updated before scrolling
-    setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 10);
+    // Scroll immediately
+    window.scrollTo(0, 0);
+    
+    // Also scroll on the next animation frame to catch any layout shifts
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
   }, [pathname]);
 
   return null;
